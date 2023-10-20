@@ -12,7 +12,8 @@
         "back-to-top-button",
         "flexible-alerts",
         "anchors",
-        "ga"
+        "ga",
+        "collapsible-chapters"
       ],
 
     "pluginsConfig": {
