@@ -221,3 +221,5 @@ pluginsConfig: {
 [Gitbook详解](https://www.cnblogs.com/jiangming-blogs/p/14642302.html)
 
 [Gitbook攻略（推荐）](https://tonydeng.github.io/gitbook-zh/gitbook-howtouse/output/README.html)
+
+[插件集合](https://github.com/swapagarwal/awesome-gitbook-plugins)

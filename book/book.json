@@ -13,7 +13,8 @@
         "flexible-alerts",
         "anchors",
         "ga",
-        "collapsible-chapters"
+        "collapsible-chapters",
+        "page-toc"
       ],
 
     "pluginsConfig": {
