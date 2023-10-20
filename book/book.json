@@ -16,7 +16,10 @@
       ],
 
     "pluginsConfig": {
-        "expandable-chapters":{}
+        "expandable-chapters":{},
+        "ga": {
+          "token": "UA-XXXX-Y"
+      }
     },
 
       "variables": {
