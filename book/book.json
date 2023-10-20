@@ -11,9 +11,7 @@
         "code","expandable-chapters",
         "back-to-top-button",
         "flexible-alerts",
-        "anchors",
-        "multilingual",
-        "breadcrumb"
+        "anchors"
       ],
 
     "pluginsConfig": {
