@@ -158,9 +158,14 @@ nvm use 10.21.1                           Use the latest available 8.0.x release
     }
 }
 ```
+
 你可以修改`plugins`来加入插件
 ```
-plugins": ['expandable-chapters','code','back-to-top-button']
+plugins": ['code','seacrh']
+```
+然后利用`gitbook install`来安装上面的插件
+```
+gitbook install 
 ```
 # 参考链接
 [官方下载和安装文档](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)
