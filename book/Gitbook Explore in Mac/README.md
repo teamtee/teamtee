@@ -208,7 +208,8 @@ pluginsConfig: {
 > An alert of type 'note' using global style 'callout'.
 
 # 三、深入探索
-## 1、Github Pages
+## 1. Github Pages
+## 2. 自动化脚本
 # 参考链接
 [官方下载和安装文档](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)
 
@@ -218,3 +219,5 @@ pluginsConfig: {
 [Gitbook操作指南](https://songlu-cube.gitee.io/courseware-gitbook-demo/1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87.html)
 
 [Gitbook详解](https://www.cnblogs.com/jiangming-blogs/p/14642302.html)
+
+[Gitbook攻略（推荐）](https://tonydeng.github.io/gitbook-zh/gitbook-howtouse/output/README.html)
