@@ -6,7 +6,7 @@
     "author": "作者",
     "lang": "zh-cn",
 
-    "plugins": ["search-pro","code","expandable-chapters","back-to-top-button"],
+    "plugins": ["search-pro","code","expandable-chapters","back-to-top-button","flexible-alerts"],
 
     "pluginsConfig": {
         "expandable-chapters":{}

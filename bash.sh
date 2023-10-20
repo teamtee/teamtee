@@ -1,3 +1,4 @@
+nvm use 10
 gitbook install book
 gitbook build book docs
 git add . 

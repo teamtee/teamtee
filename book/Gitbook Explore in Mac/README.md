@@ -115,6 +115,7 @@ nvm use 10.21.1                           Use the latest available 8.0.x release
 # 二、入门进阶
 
 ## 1.配置文件
+
 ### SUMMERY.md
 
 一份参考文件如下，这个文件的内容会被用来生成大纲。
@@ -159,7 +160,7 @@ nvm use 10.21.1                           Use the latest available 8.0.x release
 }
 ```
 
-你可以修改`plugins`来加入插件
+你可以修改`plugins`来加入插件,search插件支持中文搜索，code插件支持复制
 ```
 plugins": ['code','seacrh']
 ```
@@ -167,8 +168,50 @@ plugins": ['code','seacrh']
 ```
 gitbook install 
 ```
+插件可以配置属性
+```
+pluginsConfig: {
+    "flexible-alerts": {
+      style: "flat" // callout 或 flat
+    }
+  }
+```
+## 2.插件推荐
+
+[菜单折叠插件](https://www.npmjs.com/package/gitbook-plugin-expandable-chapters)
+```
+{
+  plugins: ['expandable-chapters'];
+}
+```
+[返回顶部插件](https://www.npmjs.com/package/gitbook-plugin-back-to-top-button)
+
+```
+{
+  plugins: ['back-to-top-button'];
+}
+```
+[引用插件](https://www.npmjs.com/package/gitbook-plugin-flexible-alerts)
+
+```
+{
+  plugins: ['flexible-alerts'];
+  pluginsConfig: {
+    "flexible-alerts": {
+      style: "flat" // callout 或 flat
+    }
+  }
+}
+```
+> [!NOTE]
+> An alert of type 'note' using global style 'callout'.
+
 # 参考链接
 [官方下载和安装文档](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)
+
+
 [官方Github仓库](https://github.com/GitbookIO/gitbook)
+
 [Gitbook操作指南](https://songlu-cube.gitee.io/courseware-gitbook-demo/1%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87.html)
+
 [Gitbook详解](https://www.cnblogs.com/jiangming-blogs/p/14642302.html)
