@@ -1,4 +1,5 @@
 {
+    "root": "./book",
     "output": "./docs",
     "title": "书名",
     "description": "描述",
