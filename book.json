@@ -1,0 +1,17 @@
+{
+    "output": "./docs",
+    "title": "书名",
+    "description": "描述",
+    "isbn": "图书编号",
+    "author": "作者",
+    "lang": "zh-cn",
+
+    "plugins": ["search-pro","code"],
+
+    "pluginsConfig": {
+        
+    },
+
+      "variables": {
+    }
+}
