@@ -117,20 +117,15 @@ nvm use 10.21.1                           Use the latest available 8.0.x release
 ## 1.配置文件
 ### SUMMERY.md
 
-一份参考文件如下:
+一份参考文件如下，这个文件的内容会被用来生成大纲。
 
-* ###表示阅读项目
-
+* `[]()`的超链接用来表示标题
 ```
 # Summary
-
-### Part I
 
 * [Part I](part1/README.md)
     * [Writing is nice](part1/README.md#writing)
     * [GitBook is nice](part1/README.md#gitbook)
-
-### Part II
 
 * [Part II](part2/README.md)
     * [We love feedback](part2/README.md#feedback)
