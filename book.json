@@ -9,7 +9,7 @@
     "plugins": ["search-pro","code","expandable-chapters","back-to-top-button"],
 
     "pluginsConfig": {
-        
+        "expandable-chapters":{}
     },
 
       "variables": {
