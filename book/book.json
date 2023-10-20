@@ -14,7 +14,7 @@
         "anchors",
         "ga",
         "collapsible-chapters",
-        "toc"
+        "page-toc-button"
       ],
 
     "pluginsConfig": {
