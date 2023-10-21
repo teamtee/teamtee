@@ -223,3 +223,5 @@ pluginsConfig: {
 [Gitbook攻略（推荐）](https://tonydeng.github.io/gitbook-zh/gitbook-howtouse/output/README.html)
 
 [插件集合](https://github.com/swapagarwal/awesome-gitbook-plugins)
+
+[GitBook CookBook(优秀)](https://haoqiangchen.github.io/hqbook/Tools/gitbook/config.html)
