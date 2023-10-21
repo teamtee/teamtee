@@ -8,8 +8,9 @@
 
     "plugins": [
         "search-pro",
-        "code","expandable-chapters",
-        "back-to-top-button",
+        "code",
+        "expandable-chapters",
+        "-back-to-top-button",
         "flexible-alerts",
         "anchors",
         "ga",

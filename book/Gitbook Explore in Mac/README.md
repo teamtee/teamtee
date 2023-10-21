@@ -160,9 +160,9 @@ nvm use 10.21.1                           Use the latest available 8.0.x release
 }
 ```
 
-你可以修改`plugins`来加入插件,search插件支持中文搜索，code插件支持复制
+你可以修改`plugins`来加入插件,`search`插件支持中文搜索，`code`插件支持复制,`-`的意思是不使用该插件，需要使用可以去掉前面的`-`
 ```
-plugins": ['code','seacrh']
+plugins": ['code','-seacrh']
 ```
 然后利用`gitbook install`来安装上面的插件
 ```
