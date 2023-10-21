@@ -105,8 +105,10 @@ lts/hydrogen -> v18.18.2 (-> N/A)
 ```
 我们需要安装`10.24.1`的版本,注意该段命令会只是会将当前的`shell`下的`Node.js`切换成`10.24.1`。
 ```
-nvm install 10.24.1                    Install a specific version number
-nvm use 10.21.1                           Use the latest available 8.0.x release
+#Install a specific version number
+nvm install 10.24.1       
+#Use the latest available 8.0.x              
+nvm use 10.21.1                        
 ```
 
 
@@ -210,6 +212,7 @@ pluginsConfig: {
 # 三、深入探索
 ## 1. Github Pages
 ## 2. 自动化脚本
+## 3. 服务上部署
 # 参考链接
 [官方下载和安装文档](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)
 
