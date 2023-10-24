@@ -1,9 +1,9 @@
 {
 
-    "title": "书名",
-    "description": "描述",
-    "isbn": "图书编号",
-    "author": "作者",
+    "title": "teamtee's home",
+    "description": "a book for writting and reading",
+    "isbn": "xx",
+    "author": "teamtee",
     "lang": "zh-cn",
 
     "plugins": [
@@ -16,7 +16,7 @@
         "ga",
         "collapsible-chapters",
         "-page-toc-button",
-        "anchor-navigation-ex",
+        "-anchor-navigation-ex",
         "remove-published-with-link"
       ],
 

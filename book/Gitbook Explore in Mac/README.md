@@ -63,7 +63,7 @@ TypeError: cb.apply is not a function
 Node.js v21.0.0
 ```
 
-这是因为 Node.js 的版本不符合 gitbook 的依赖，下面有三个可能的解决方法
+这是因为 Node.js 的版本不符合 gitbook 的依赖，下面有三个可能的解决方法（推荐三）
 
 * 注释`polyfills.js`文件中的这三行
 ```
@@ -210,9 +210,63 @@ pluginsConfig: {
 > An alert of type 'note' using global style 'callout'.
 
 # 三、深入探索
-## 1. Github Pages
-## 2. 自动化脚本
-## 3. 服务上部署
+##  Github Pages
+在`github`上新建一个仓库，新建个`gh-page`分支，在`github`设置支持静态网页的`pages`。然后我们可以将这个仓库克隆下来，初始化`gitbook`。不过值得注意的是`github`只是支持选择`/`和`/docs`这两个路径作为网页根目录。因此我们选择`/docs`，这样的话适合`gitbook`.
+
+调整`gitbook`仓库的目录如下,根路径下的`README.md`作为仓库的说明，`book`下的`README.md`作为书籍首页的说明。`book`可以修改为你喜欢的名字。
+```
+.
+├── README.md
+├── book
+│   ├── README.md
+│   ├── SUMMARY.md
+│   ├── book.json
+└── docs
+```
+同时我们需要修改`gitbook`命令参数，可以尝试执行如下命令
+```
+# 安装book下book.json的插件
+gitbook install book
+# gitbook build src dest
+gitbook build book docs
+# gitbook serve src dest
+gitbook serve book docs
+```
+执行后的示例目录
+```
+.
+├── README.md
+├── bash.sh
+├── book
+│   ├── Gitbook Explore in Mac
+│   ├── How to write markdown elegantly
+│   ├── README.md
+│   ├── SUMMARY.md
+│   ├── book.json
+│   └── node_modules
+└── docs
+    ├── Gitbook Explore in Mac
+    ├── How to write markdown elegantly
+    ├── gitbook
+    ├── index.html
+    ├── search_index.json
+    └── search_plus_index.json
+```
+##  自动化脚本
+
+我构建的一份自动更新上传脚本如下，前两行是为了在`bash`中使用`nvm`
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # 加载 nvm
+nvm use 10
+gitbook install book
+gitbook build book docs
+git add . 
+git commit -m "Update"
+git push
+gitbook serve book docs
+```
+##  输出文档
 # 参考链接
 [官方下载和安装文档](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)
 
