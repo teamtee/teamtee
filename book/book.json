@@ -16,7 +16,7 @@
         "ga",
         "collapsible-chapters",
         "-page-toc-button",
-        "-anchor-navigation-ex",
+        "anchor-navigation-ex",
         "remove-published-with-link"
       ],
 
