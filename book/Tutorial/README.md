@@ -94,7 +94,28 @@ passwd
 ```
 ### 文件系统
 
-万物的起源是什么？我今天就来告诉你是`/`.
+万物的起源是什么？我今天就来告诉你是`/`.在根目录下面是
+
+```
+/
+├── bin # 所有⽤⼾可执⾏的⽂件
+├── boot # 引导器和内核
+├── dev # 设备⽂件
+├── etc # 配置⽂件
+├── home # ⽤⼾主⽬录
+├── libxx # 动态库 .so
+├── media # 可移出设备的挂载点
+├── mnt # 临时挂载点
+├── opt # ⾃带依赖的软件
+├── proc # 包含内核和进程信息的虚拟⽂件系统
+├── root # root ⽤⼾的主⽬录
+├── run # 运⾏时⽂件⽬录，如进程 pid ⽂件，套接字⽂件
+├── sbin # 只有 root ⽤⼾可执⾏的⽂件
+├── sys # 包含内核和系统信息的虚拟⽂件系统
+├── tmp # 临时⽂件系统
+├── usr # Unix System Resources 的缩写，存放软件
+└── var # 存放经常变化的⽂件，如⽇志
+```
 
 ### 进程和内存管理
 
@@ -102,11 +123,15 @@ passwd
 
 ### 等待你开发的宝藏
 文件管理 - `cd`, `pwd`, `mkdir`, `rmdir`, `ls`, `cp`, `rm`, `mv`, `tar`
+
 文件检索 - `cat`, `more`, `less`, `head`, `tail`, `file`, `find`
+
 输入输出控制 - 重定向, 管道, `tee`, `xargs`
+
 文本处理 - `vim`, `grep`, `awk`, `sed`, `sort`, `wc`, `uniq`, `cut`, `tr`
-正则表达式:
+
 网络相关: `wget` `curl`
+
 系统监控 - `jobs`, `ps`, `top`, `kill`, `free`, `demsg`, `lsof`
 
 ### 勇者大战史莱姆
@@ -160,3 +185,24 @@ Host Dian11
     User fyg
     IdentityFile ~/.ssh/dian11
 ```
+### 跳板机
+```
+Host Dian11 
+    HostName 192.168.0.11
+    User fyg
+    IdentityFile ~/.ssh/dian11
+    ProxyCommand ssh -q -W %h:%p Dian_Public
+Host Dian_Public
+    HostName 192.168.0.XX
+    User fyg
+    IdentityFile ~/.ssh/dian_public
+
+```
+
+
+## 最后
+
+这是一次很简单的培训，目的是为了让大家认识Linux，而不是将Linux的全部灌输给大家，这样效果也会很不好，因此本文的任务主要是引导大家学习，让大家认识到Linux有哪些东西。
+
+下面推荐一些学习资料：
+《Linux就该这么学》
