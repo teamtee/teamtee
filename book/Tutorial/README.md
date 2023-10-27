@@ -205,4 +205,4 @@ Host Dian_Public
 这是一次很简单的培训，目的是为了让大家认识Linux，而不是将Linux的全部灌输给大家，这样效果也会很不好，因此本文的任务主要是引导大家学习，让大家认识到Linux有哪些东西。
 
 下面推荐一些学习资料：
-《Linux就该这么学》
+[《Linux就该这么学》](https://github.com/teamtee/teamtee/blob/main/book/Tutorial/Linux_Probe.pdf)
