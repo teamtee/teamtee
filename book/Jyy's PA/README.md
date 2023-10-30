@@ -98,9 +98,9 @@
 `C-b x`: 删除当前`panes`
 
 ##### 复制和粘贴
-`C-b [`: 进入复制模式，复制模式下会冻结输出
+`C-b [`: 进入复制模式/滚轮模式，复制模式下会冻结输出
 
-&emsp;&emsp;`C-b space`:开始选取复制
+&emsp;&emsp;`C-b C-space`:开始选取复制
 
 &emsp;&emsp;`C-b w`:结束复制
 
@@ -115,10 +115,145 @@
 
 `:set -g mouse on`: 支持鼠标
 
+#### Tmux配置文件（TODO）
+
+### Makefile
+
+这里是一份[教程](https://makefiletutorial.com)
+
+#### 基本概念
+`Makefile`主要由目标、依赖、命令构成
+```
+targets: prerequisites
+	command
+	command
+	command
+```
+#### rule
+##### inplicit rule
+
+```
+# 编译c文件时如果缺乏指定`prerequisite`的`*.o`文件的编译规则,会自动执行下面的规则编译所需文件
+$(CC) -c $(CPPFLAGS) $(CFLAGS) $^ -o $@
+# 编译c++文件时如果缺乏指定`prerequisite`的`*.o`文件的编译规则,会自动执行下面的规则编译所需文件
+$(CXX) -c $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
+# 链接文件时如果缺乏指定`prerequisite`的`*.o`文件的编译规则,会自动执行下面的规则编译所需文件
+$(CC) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
+
+```
+##### pattern rule
+```
+%.o:%.c
+```
+##### static pattern rule
+```
+objects = foo.o bar.o all.o
+all: $(objects)
+# implicit rule
+$(objects):%.o:%.c
+
+all.c:
+	echo "int main() { return 0; }" > all.c
+```
+#### wildcard
+`*`通配符会自动匹配当前目录下文件,推荐使用`$(wildcard *.c)`而非`*.c`
+```
+*.c:当前目录下不存在*.c文件时，保持为*.c不变
+$(wildcard *.c):当前目录下不存在*.c文件时，为空
+```
+`wildcard`还可以判断文件是否存在
+```
+ifeq ($(wildfile $(NEMUOME)/main.c),)
+    $(error file not exist)
+endif
+```
+
+`*`通配符同常用来匹配文件的无后缀名
+
+#### automatic ariables
+
+```
+$@:target
+$?:prerequisite newer than target
+$^: all prerequisite
+$<:first prerequisite
+```
+#### 变量赋值
+```
+:= 直接赋值
+= 间接赋值
+?= 判空赋值（便量不存在,变量存在为空也不会赋值）
++= 追加赋值
+```
+
+#### function
+
+make有大量的内置函数
+```
+# subst
+# 将str中的old字符替换成new
+$(subst old,new,str)
+
+# patsubst
+# 将strs中以空格分割的字符对pattern进行匹配，如果符合就替换成replace
+$(patsubst pattern,replace,strs)
+two := $(foo:%.o=%.c)
+three := $(foo:.o=.c)
+
+# if
+# 检测条件变量是否为空，是则返回第一个值，否则返回第二个值
+$(if condition,value1,value2)
+
+# call
+$(call func,arg1,arg2,...)
+
+# addprefix
+$(addprefix -I,INC_PATH)
+
+# fileter
+$(filter *.o,objects):%.o:*.c
+```
+#### 一些指令
+```
+.PHONY:
+.DEFAULT_GOAL:
+```
+#### include|-include|sinclude
+`make`命令会在`-I`指定的目录和系统的`include`目录下查找`include`所包含的文件，当为查找到文件且没有构建该文件的规则时，如果是`include`，`make`会报错退出，`-include`忽视会继续执行，`sinclude`是`GNU make`下为了和其他`make`兼容的`-inlcude`
+
+
+
+#### Jyy's NEMU 
+
+##### section 1
+ `$(deps_config): ;` 是一个空规则。它表示 `deps_config` 中的文件不需要进行任何操作，即使这些文件不存在，也不会报错
+
+```
+deps_config := \
+	src/device/Kconfig \
+	src/memory/Kconfig \
+	src/isa/riscv32/Kconfig \
+	/home/teamtee/Desktop/ics2021/nemu/Kconfig
+
+include/config/auto.conf: \
+	$(deps_config)
+
+
+$(deps_config): ;
+```
+
+
+##### section 2 
+```
+remove_quote = $(patsubst "%",%,$(1))
+CC = $(call remove_quote,$(CONFIG_CC))
+
+```
 ## PA1
 
 
 ### 调试器
+
 #### Readline
 
 #### Str
@@ -129,7 +264,7 @@ char *strtok(char *str, const char *delim);
 
 #### C regular
 
-C 的正则表达式匹配通过`编译`+`匹配`的方式进行匹配，可以通过`man regexec`查看教程
+C 的正则表达式匹配通过**编译**+**匹配**的方式进行匹配，可以通过`man regexec`查看教程
 
 `regcomp`用来编译正则表达算式，`cflags`表示支持的正则表达式语法,编译成功返回`0`
 
@@ -192,3 +327,16 @@ int main(void)
 }
 
 ```
+#### color output
+但我们使用命令的时候可以看到是有颜色输出的，比如`ls`,实际上命令通常都有一个`--color`的选项来控制在什么情况下输出字符,如果我们`ls --color=true | vim -`是可以看到奇怪的输出.
+
+实际上控制台通过以下方式输出颜色
+
+```
+# 其中0；31；42；为控制输出条件
+\033[0;31;42moutput\033[0m
+
+```
+0-9字体效果：0默认，1高亮，4下划，5闪烁，7反白显示
+
+30-39字体颜色，40-49背景颜色：黑红绿黄蓝紫青白
