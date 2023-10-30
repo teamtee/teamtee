@@ -100,9 +100,9 @@
 ##### 复制和粘贴
 `C-b [`: 进入复制模式，复制模式下会冻结输出
 
-&emsp;&emsp;`C-b space`:开始选取复制
+&emsp;&emsp;`C-space`:开始选取复制
 
-&emsp;&emsp;`C-b w`:结束复制
+&emsp;&emsp;`C-w`:结束复制
 
 &emsp;&emsp;`q`: 退出复制
 
