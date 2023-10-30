@@ -212,7 +212,7 @@ NAT-桥接-主机
 
 下面推荐学习资料：
 
-[《Linux就该这么学》](https://github.com/teamtee/teamtee/blob/main/book/Tutorial/Linux_Probe.pdf)
+[《Linux就该这么学》](https://github.com/teamtee/teamtee/blob/main/book/Tutorial/Dian/Linux_Probe.pdf)
 
 [MIT-Missing-Semester](https://missing.csail.mit.edu/2020/)
 

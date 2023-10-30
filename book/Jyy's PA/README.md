@@ -100,18 +100,8 @@
 ##### 复制和粘贴
 `C-b [`: 进入复制模式/滚轮模式，复制模式下会冻结输出
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-&emsp;&emsp;`C-space`:开始选取复制
-=======
-&emsp;&emsp;`C-b C-space`:开始选取复制
->>>>>>> 4fd4cac (Update)
-
-=======
-
 &emsp;&emsp;`C-space`:开始选取复制
 
->>>>>>> 9c2eb3c (Update)
 &emsp;&emsp;`C-w`:结束复制
 
 &emsp;&emsp;`q`: 退出复制
@@ -132,96 +122,96 @@
 这里是一份[教程](https://makefiletutorial.com)
 
 #### 基本概念
-`Makefile`主要由目标、依赖、命令构成
+`Makefile`主要由规则构成，而规则由目标、依赖、命令构成
 ```
 targets: prerequisites
 	command
 	command
 	command
 ```
-#### rule
-##### inplicit rule
-
+注：命令只能够出现在规则内部或者被用于变量的赋值（这种情况下会屏蔽命令的影响只是接受输出）
+#### 规则
+##### 隐式规则
+当缺乏对依赖文件的编译规则时下面的规则会被自动执行
 ```
-# 编译c文件时如果缺乏指定`prerequisite`的`*.o`文件的编译规则,会自动执行下面的规则编译所需文件
+# c
 $(CC) -c $(CPPFLAGS) $(CFLAGS) $^ -o $@
-# 编译c++文件时如果缺乏指定`prerequisite`的`*.o`文件的编译规则,会自动执行下面的规则编译所需文件
+# c++
 $(CXX) -c $(CPPFLAGS) $(CXXFLAGS) $^ -o $@
-# 链接文件时如果缺乏指定`prerequisite`的`*.o`文件的编译规则,会自动执行下面的规则编译所需文件
+# ld
 $(CC) $(LDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
 ```
-##### pattern rule
+##### 模式规则
 ```
 %.o:%.c
 ```
-##### static pattern rule
+##### 静态模式规则
 ```
-objects = foo.o bar.o all.o
-all: $(objects)
-# implicit rule
 $(objects):%.o:%.c
-
-all.c:
-	echo "int main() { return 0; }" > all.c
-```
-#### wildcard
-`*`通配符会自动匹配当前目录下文件,推荐使用`$(wildcard *.c)`而非`*.c`
-```
-*.c:当前目录下不存在*.c文件时，保持为*.c不变
-$(wildcard *.c):当前目录下不存在*.c文件时，为空
-```
-`wildcard`还可以判断文件是否存在
-```
-ifeq ($(wildfile $(NEMUOME)/main.c),)
-    $(error file not exist)
-endif
 ```
 
-`*`通配符同常用来匹配文件的无后缀名
-
-#### automatic ariables
-
+#### 变量
+##### 普通变量
+```
+SRCS = $(shell find . -name "*.c")
+CFLAGS += SRCS
+```
+>[!NOTE]
+>下面的SRCS实际为空
+>SRCS = $(find . -name "*.c")
+##### 变量赋值
+```
+:= 直接赋值
+= 间接赋值
+?= 判空赋值（便量不存在,变量存在为空也不会赋值）
++= 追加赋值 
+```
+##### 自动变量
+这些变量只是在规则内部起作用
 ```
 $@:target
 $?:prerequisite newer than target
 $^: all prerequisite
 $<:first prerequisite
 ```
-#### 变量赋值
+##### 函数变量
+
+#### 通配符
+`*`在命令当中可以表现为通配符
 ```
-:= 直接赋值
-= 间接赋值
-?= 判空赋值（便量不存在,变量存在为空也不会赋值）
-+= 追加赋值
+$(wildcard *.c)
+$(echo *.c)
+```
+`%`在规则和变量赋值中表现为通配符号
+```
+two := $(foo:%.o=%.c)
+%.o:%.c
 ```
 
-#### function
+#### 函数
 
 make有大量的内置函数
 ```
-# subst
-# 将str中的old字符替换成new
+# subst 字符替换
 $(subst old,new,str)
 
-# patsubst
-# 将strs中以空格分割的字符对pattern进行匹配，如果符合就替换成replace
+# patsubst 模式替换（支持正则表达式）
 $(patsubst pattern,replace,strs)
 two := $(foo:%.o=%.c)
 three := $(foo:.o=.c)
 
-# if
-# 检测条件变量是否为空，是则返回第一个值，否则返回第二个值
+# if 条件（当conditio为空或者不存在时为假）
 $(if condition,value1,value2)
 
-# call
+# call 
 $(call func,arg1,arg2,...)
 
-# addprefix
+# addprefix （当INC_PATH的某些项前有—I的不会重复添加）
 $(addprefix -I,INC_PATH)
 
 # fileter
-$(filter *.o,objects):%.o:*.c
+$(filter *.o,objects):%.o:%.c
 ```
 #### 一些指令
 ```
@@ -231,7 +221,14 @@ $(filter *.o,objects):%.o:*.c
 #### include|-include|sinclude
 `make`命令会在`-I`指定的目录和系统的`include`目录下查找`include`所包含的文件，当为查找到文件且没有构建该文件的规则时，如果是`include`，`make`会报错退出，`-include`忽视会继续执行，`sinclude`是`GNU make`下为了和其他`make`兼容的`-inlcude`
 
+### Git
 
+#### 合并分支
+当你第一次`git pull`的时候如果遇到冲突，会提示你配置`pull`,实际上配置的选项有四种
+```
+pull.rebase true
+pull.ff only
+```
 
 #### Jyy's NEMU 
 
