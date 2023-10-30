@@ -198,11 +198,47 @@ Host Dian_Public
     IdentityFile ~/.ssh/dian_public
 
 ```
+### 计算级网络相关
 
+网址——ip
+主机-DHCP-域名解析器
+NAT-桥接-主机
 
 ## 最后
 
 这是一次很简单的培训，目的是为了让大家认识Linux，而不是将Linux的全部灌输给大家，这样效果也会很不好，因此本文的任务主要是引导大家学习，让大家认识到Linux有哪些东西。
 
-下面推荐一些学习资料：
+如果有问题：`RTFW`
+
+下面推荐学习资料：
+
 [《Linux就该这么学》](https://github.com/teamtee/teamtee/blob/main/book/Tutorial/Linux_Probe.pdf)
+
+[MIT-Missing-Semester](https://missing.csail.mit.edu/2020/)
+
+## 作业
+
+大家做作业的时候肯定会遇到很多的困难，这是非常正常的，因为这对于你们来说是一个陌生领域的任务。而学会在陌生领域摸爬打滚的能力是你们需要解决的，不会怎么办？到处问，上网搜，问AI都可以。
+
+以下的作业大家自觉做，不会检查。
+### 命令实践
+给定文本
+（1）大写换小写，小写换大写
+（2）给定任意文本统计"hello"出现的次数
+
+### apt
+
+(1) 使用apt或者yum安装tree，tldr，vim,python
+(2) 学会apt换源
+
+### ssh
+（1）直连接：在自己的windows上用ssh连接服务器或者自己的虚拟机/WSL
+（2）跳转：在寝室用跳板机连接服务器
+
+服务器公共服务器信息
+```
+IP：dian.group.org
+user：public
+port：2222
+passwd：ljzzy@beibei
+```
