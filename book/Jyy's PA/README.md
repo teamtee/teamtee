@@ -101,11 +101,17 @@
 `C-b [`: 进入复制模式/滚轮模式，复制模式下会冻结输出
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 &emsp;&emsp;`C-space`:开始选取复制
 =======
 &emsp;&emsp;`C-b C-space`:开始选取复制
 >>>>>>> 4fd4cac (Update)
 
+=======
+
+&emsp;&emsp;`C-space`:开始选取复制
+
+>>>>>>> 9c2eb3c (Update)
 &emsp;&emsp;`C-w`:结束复制
 
 &emsp;&emsp;`q`: 退出复制
