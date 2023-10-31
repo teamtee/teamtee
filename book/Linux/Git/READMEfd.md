@@ -43,26 +43,20 @@ git log --oneline --decorate --graph --all
 要忽略指定模式以外的文件或目录，可以在模式前加上叹号（!）取反
 ```
 `glob` 模式是指 `shell` 所使用的简化了的正则表达式。 支持`*`，`？`，`[abc]`,`[a-z]`星号。 使用两个星号`**`表示匹配任意中间目录。
-### 分支指代
---
-HEAD～
-
 ### reset和checkout 
 分支层面
 ```
-git reset --soft HEAD (移动HEAD和分支）
-git reset HEAD （移动HEAD和分支，修改暂存区）
-git reset --hard HEAD （移动HEAD和分支，修改暂存区，工作区）（⚠️）
-git checkout HEAD （移动HEAD，修改暂存区，工作区）
+git reset --soft HEAD
+git reset HEAD
+git reset --hard HEAD
+git checkout HEAD
 ```
 文件层面
 ```
-git reset HEAD file （修改暂存区）
-git checkout HEAD file （修改暂存区，工作区） （⚠️）
+git reset HEAD file 
+git checkout HEAD file
 ```
 ### 分支合并
 
 分支合并有`merge`和`rebase`两种，
-`merge`合并的情况有`fast-foward`，`Tree head merge`,
-
-### 标签（TODO）
+`merge`合并的情况有`fast-foward`
