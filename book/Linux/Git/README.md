@@ -62,7 +62,30 @@ git checkout HEAD file （修改暂存区，工作区） （⚠️）
 ```
 ### 分支合并
 
-分支合并有`merge`和`rebase`两种，
-`merge`合并的情况有`fast-foward`，`Tree head merge`,
+分支合并有`merge`和`rebase`方法,`git pull`时会自动调用`git merge`,`git merge`首次要求设定`ff`或者`rebase`的配置值。
+```
+git stash
+git pull
+git stash pop
+```
+
+```
+git checkout -b branchA
+git add .
+git commit -m ""
+git checkout main
+git reset --hard 
+git pull
+git rebase main branchA
+```
+
 
 ### 标签（TODO）
+
+## 有趣命令
+
+### 修改远程HEAD
+```
+git remote set-head origin branchA
+git remote set-head origin -d
+```
