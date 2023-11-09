@@ -9,5 +9,8 @@
     * [Make](Linux/Make/README.md)
 * [Jyy's PA](Jyy's PA/README.md)
 * [Tutorial](Tutorial/README.md)
+* [DeepLearning](DeepLearning/README.md)
+    * [ML2023HW](DeepLearning/ML2023HW/README.md)
+    * [Pandas](DeepLearning/Pandas/README.md)
 ----
 
