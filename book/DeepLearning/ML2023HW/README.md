@@ -9,7 +9,7 @@
 通过计算协方差系数选择绝对值较大的特征，难点是选择多相关的特征？  
 
 0.5为门槛：1.7
-0.6:1.31
+0.6为门槛:1.31
 0.75为门槛：1.13
 0.9为门槛：1.31  
 
@@ -71,4 +71,7 @@ connect：5 0.55
 connect：7 0.58
 connect：9 0.60
 connect：9 layer：2-》3 0.62
-connect：9 layer：2-》4 0.63
+connect：9 layer：4 0.63
+connect：9 layer：4 droupout 0.2 0.56
+
+connect：9 layer：4 batchnorm 0.63
