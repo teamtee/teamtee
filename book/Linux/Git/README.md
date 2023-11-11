@@ -60,8 +60,9 @@ git checkout HEAD （移动HEAD，修改暂存区，工作区）
 git reset HEAD file （修改暂存区）
 git checkout HEAD file （修改暂存区，工作区） （⚠️）
 ```
-### 分支合并
-
+### resotre
+git restore --sourece --staged --worktree file
+### 分支合并(TODO) --continue --abort
 分支合并有`merge`和`rebase`方法,`git pull`时会自动调用`git merge`,`git merge`首次要求设定`ff`或者`rebase`的配置值。
 ```
 git stash
