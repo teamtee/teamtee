@@ -27,7 +27,7 @@
           "token": "UA-XXXX-Y"
         },
         "theme-default": {
-        "showLevel": true
+        "showLevel": false
         }
     },
       "variables": {
