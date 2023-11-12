@@ -18,16 +18,13 @@
         "-page-toc-button",
         "anchor-navigation-ex",
         "remove-published-with-link",
-        "theme-default"
+        "theme-comscore"
       ],
 
     "pluginsConfig": {
         "expandable-chapters":{},
         "ga": {
           "token": "UA-XXXX-Y"
-        },
-        "theme-default": {
-        "showLevel": false
         }
     },
       "variables": {
