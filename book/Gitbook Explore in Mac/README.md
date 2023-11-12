@@ -194,20 +194,40 @@ pluginsConfig: {
 }
 ```
 [引用插件](https://www.npmjs.com/package/gitbook-plugin-flexible-alerts)
-
+这里有个[教程](https://www.zhaowenyu.com/gitbook-doc/plugins/cat-words-emphasize.html)
 ```
 {
   plugins: ['flexible-alerts'];
   pluginsConfig: {
     "flexible-alerts": {
       style: "flat" // callout 或 flat
+      //自定义类型，className有
+      "comment": {
+        "label": "Comment",
+        "icon": "fa fa-comments",
+        "className": "info"
+      }
     }
   }
 }
 ```
 引用插件效果展示如下
+
 > [!NOTE]
-> An alert of type 'note' using global style 'callout'.
+> Information the user should notice even if skimming.
+***
+> [!TIP]
+> Optional information to help a user be more successful.
+***
+> [!IMPORTANT]
+> Essential information required for user success.
+***
+> [!CAUTION]
+> Negative potential consequences of an action.
+***
+> [!WARNING]
+> Dangerous certain consequences of an action.
+
 
 # 三、深入探索
 ##  Github Pages
