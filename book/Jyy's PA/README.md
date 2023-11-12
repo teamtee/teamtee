@@ -84,7 +84,7 @@ typedef struct {
 ### C regular实例
 下面是一个简单的示例
 
-```c
+```c 
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>

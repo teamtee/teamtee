@@ -20,6 +20,9 @@
 
 代码块：` ``` ``` `
 
+> [!TIP]
+> 如果想在代码块中使用` ``` `,可以使用` ```` `代替` ``` `包裹）
+
 花体：` `` `` `
 
 行内代码：` `` `
@@ -36,8 +39,41 @@
 - [x] task2
 - [ ] task3
 ```
+表格
+| Heading 1 | Heading 2 | Heading 3 |
+| --------- | --------- | --------- |
+| cell 1    | cell 2    | cell 3    |
+| cell 4    | cell 5    | cell 6    |
 
-(PS:如果想在代码块中使用` ``` `,可以使用` ```` `代替` ``` `包裹）
+折叠表格
+<details>
+<summary>My top languages</summary>
+
+| Rank | Languages |
+|-----:|-----------|
+|     1| Javascript|
+|     2| Python    |
+|     3| SQL       |
+
+</details>
+
+
+
+
+
+mergaid关系图
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+数学
+```math
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+```
 
 ### 链接
 

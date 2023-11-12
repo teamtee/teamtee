@@ -212,7 +212,7 @@ pluginsConfig: {
 }
 ```
 引用插件效果展示如下
-
+```
 > [!NOTE]
 > Information the user should notice even if skimming.
 
@@ -221,8 +221,10 @@ pluginsConfig: {
 > Optional information to help a user be more successful.
 
 
+
 > [!IMPORTANT]
 > Essential information required for user success.
+
 
 > [!CAUTION]
 > Negative potential consequences of an action.
@@ -230,7 +232,7 @@ pluginsConfig: {
 
 > [!WARNING]
 > Dangerous certain consequences of an action.
-
+```
 
 # 三、深入探索
 ##  Github Pages
