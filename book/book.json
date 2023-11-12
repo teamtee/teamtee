@@ -13,12 +13,13 @@
         "-back-to-top-button",
         "flexible-alerts",
         "anchors",
-        "-ga",
+        "ga",
         "collapsible-chapters",
         "-page-toc-button",
         "anchor-navigation-ex",
         "remove-published-with-link",
-        "theme-comscore"
+        "theme-comscore",
+        "pageview-count"
       ],
 
     "pluginsConfig": {
@@ -34,7 +35,7 @@
           "multipleH2": false,
           "multipleH3": false,
           "multipleH4": false,
-          "showLevelIcon": false,
+          "showLevelIcon": true,
           "showLevel": false
       }
     },
