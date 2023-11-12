@@ -233,7 +233,19 @@ pluginsConfig: {
 > [!WARNING]
 > Dangerous certain consequences of an action.
 ```
-
+[数学插件](https://github.com/GitbookIO/plugin-mathjax)
+```
+{
+    "plugins": ["mathjax"]
+}
+{
+    "pluginsConfig": {
+        "mathjax":{
+            "forceSVG": true
+        }
+    }
+}
+```
 # 三、深入探索
 ##  Github Pages
 在`github`上新建一个仓库，新建个`gh-page`分支，在`github`设置支持静态网页的`pages`。然后我们可以将这个仓库克隆下来，初始化`gitbook`。不过值得注意的是`github`只是支持选择`/`和`/docs`这两个路径作为网页根目录。因此我们选择`/docs`，这样的话适合`gitbook`.
