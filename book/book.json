@@ -17,7 +17,7 @@
         "collapsible-chapters",
         "-page-toc-button",
         "anchor-navigation-ex",
-        "remove-published-with-link"，
+        "remove-published-with-link",
         "theme-default"
       ],
 
@@ -25,7 +25,7 @@
         "expandable-chapters":{},
         "ga": {
           "token": "UA-XXXX-Y"
-        }
+        },
         "theme-default": {
         "showLevel": true
         }
