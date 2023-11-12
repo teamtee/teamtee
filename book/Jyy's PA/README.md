@@ -40,7 +40,7 @@ CC = $(call remove_quote,$(CONFIG_CC))
 
 #### Str
 
-```
+```c
 char *strtok(char *str, const char *delim);
 ```
 
@@ -50,13 +50,13 @@ C 的正则表达式匹配通过**编译**+**匹配**的方式进行匹配，可
 
 `regcomp`用来编译正则表达算式，`cflags`表示支持的正则表达式语法,编译成功返回`0`
 
-```
+```c
 int regcomp(regex_t *preg, const char *regex, int cflags);
 
 ```
 `regexec`用编译好的正则表达式来匹配字符串,匹配成功至少一次后返回`0`，`preg`表示编译好的正则表达式，`string`表示待匹配的字符串，`nmatch`表示要匹配的`pmathc`，`pmathc`用来存储匹配的信息，`pmatch`有两个变量,`rm_so`表示匹配到的开始，`rm_eo`表示匹配到的结束,如果`rm_so`为`-1`表示未匹配到，`eflags`一般取0.
 
-```
+```c
 int regexec(const regex_t *preg, const char *string, size_t nmatch,regmatch_t pmatch[], int eflags);
 typedef struct {
    regoff_t rm_so;
@@ -84,7 +84,7 @@ typedef struct {
 ### C regular实例
 下面是一个简单的示例
 
-```
+```c
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
