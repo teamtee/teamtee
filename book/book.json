@@ -20,7 +20,7 @@
         "remove-published-with-link",
         "theme-comscore",
         "pageview-count",
-        "mathjax"
+        "-mathjax"
       ],
 
     "pluginsConfig": {
@@ -38,10 +38,7 @@
           "multipleH4": false,
           "showLevelIcon": true,
           "showLevel": false
-        },
-        "mathjax":{
-          "forceSVG": true
-      }
+        }
     },
       "variables": {
     }
