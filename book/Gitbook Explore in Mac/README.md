@@ -304,6 +304,13 @@ git push
 gitbook serve book docs
 ```
 ##  输出文档
+
+## 问题合集
+
+###  gitbook install 出问题
+使用下面的替代
+```npm i gitbook-plugin-*```
+
 # 参考链接
 [官方下载和安装文档](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)
 
