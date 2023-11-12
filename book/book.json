@@ -25,10 +25,10 @@
         "expandable-chapters":{},
         "ga": {
           "token": "UA-XXXX-Y"
-      },
+        } ,
         "theme-default": {
         "showLevel": true
-    
+        }
 }
 
     },
