@@ -85,6 +85,11 @@
 Here is a note!
 ```
 
+
+>[info] 这里是**提示信息**
+>通常用于一些提醒事项
+
+
 ## 写代码
 参考[文章](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81%E5%9D%97)
 你可以使用`内容`
