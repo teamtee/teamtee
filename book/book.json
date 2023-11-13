@@ -19,7 +19,8 @@
         "anchor-navigation-ex",
         "remove-published-with-link",
         "theme-comscore",
-        "pageview-count"
+        "pageview-count",
+        "katex"
 
       ],
 

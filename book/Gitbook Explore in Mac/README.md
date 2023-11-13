@@ -309,7 +309,10 @@ gitbook serve book docs
 
 ###  gitbook install 出问题
 使用下面的替代
-```npm i gitbook-plugin-*```
+```
+npm install gitbook-plugin-*
+gitbook install 
+```
 
 # 参考链接
 [官方下载和安装文档](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)

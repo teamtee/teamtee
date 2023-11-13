@@ -1,6 +1,39 @@
+## 优化器Optim
+优化即为寻找最小loss的过程，通常采用梯度下降的算法，关于移动的方向在深度学习里基本上是沿着梯度的方向，但是对于移动的距离，会有不同的解法，朝着所有样本的梯度方向移动是数学里梯度下降法的做法，但是不适合深度学习。
+SGD：朝着每一个批次的梯度方向移动
+SGDM：朝着每一个批次和上一次批次的联合梯度方向移动
+Adagrad：
+RMSPro：
+Adam：
+$$\frac{1}{2}$$
+```math
+\frac{1}{2}
+```
+### 
 
-[Transformer精讲](https://adaning.github.io/posts/6744.html)
+### CNN
+卷积神经网络的成功之处在与卷积和池化
 
+卷积可以认为是简化了的全连接层
+
+（1）没有偏差
+
+（2）参数共享
+
+多个输出的卷积可以认为是识别不同特征的通道
+
+池化在于可以通过全局的视角搜寻特征
+
+#### 卷积
+首先你明白卷积多基本含义，然后理解卷积不仅仅是在通道内卷积，而且是是跨越多通道的
+
+![多输入一输出](media/16998577406466.jpg)
+
+![多输入多输出](media/16998577632330.jpg)
+#### 池化
+池化只是在通道内池化，并不跨越不同通道
+
+最大池化、平均池化、注意力池化
 ### RNN
 标准神经网络中的所有输入和输出都是相互独立的，但是在某些情况下，例如在预测短语的下一个单词时，前面的单词是必要的，因此必须记住前面的单词。结果，RNN 应运而生，它使用隐藏层来克服这个问题。RNN 最重要的组成部分是隐藏状态，它记住有关序列的特定信息。
 
@@ -53,5 +86,15 @@ GRU只有重置门、更新门，没有隐藏记忆单元，会生成隐藏状�
 
 #### 拓展
 Sequence to Sequence AutoDecoder
+
+
+### Transformer
+
+`Transformer`完全是基于`Attention`和`Seq to Seq`的模型,论文原文如下[Attention Is All You Need](https://arxiv.org/abs/1706.03762),有关`Transformer`的讲解我不再重复造轮子，请参考[Transformer精讲](https://adaning.github.io/posts/6744.html)，[The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+
+
+## 参考资料
+动手学深度学习v2
+李宏毅ML2023
 
 
