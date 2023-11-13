@@ -201,17 +201,11 @@ pluginsConfig: {
   pluginsConfig: {
     "flexible-alerts": {
       style: "flat" // callout 或 flat
-      //自定义类型，className有
-      "comment": {
-        "label": "Comment",
-        "icon": "fa fa-comments",
-        "className": "info"
-      }
     }
   }
 }
 ```
-引用插件效果展示如下
+引用插件语法
 ```
 > [!NOTE]
 > Information the user should notice even if skimming.
@@ -233,17 +227,40 @@ pluginsConfig: {
 > [!WARNING]
 > Dangerous certain consequences of an action.
 ```
+> [!NOTE]
+> Information the user should notice even if skimming.
+
+22
+> [!TIP]
+> Optional information to help a user be more successful.
+
+
+22
+> [!IMPORTANT]
+> Essential information required for user success.
+
+22
+> [!CAUTION]
+> Negative potential consequences of an action.
+
+22
+> [!WARNING]
+> Dangerous certain consequences of an action.
+拓展玩法：自定义引用
+```
+//自定义类型，className可能有info,warning,tip,note
+      "comment": {
+        "label": "Comment",
+        "icon": "fa fa-comments",
+        "className": "info"
+      }
+
+```
 [数学插件](https://github.com/GitbookIO/plugin-mathjax)
+`mathjax`有问题，总是安装不了，无意间发现了`katex`可以直接安装
 ```
 {
-    "plugins": ["mathjax"]
-}
-{
-    "pluginsConfig": {
-        "mathjax":{
-            "forceSVG": true
-        }
-    }
+    "plugins": ["katex"]
 }
 ```
 # 三、深入探索

@@ -1,5 +1,5 @@
 # how to write markdown elegantly
-
+首先你必须明白mardown是有不同的解析器，不同的解析器对于基础的语法都同时支持，但是对于高级的语法就不一定兼容了。比如Github的README.md，Typora，NWeb这些不同的编译器的解析不同，但是本文主要讲解的是基于Gitbook的markdown语法。
 ## 基本入门
 参考[教程](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 ### 文本样式
