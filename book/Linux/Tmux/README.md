@@ -136,12 +136,13 @@ run '~/.tmux/plugins/tpm/tpm'
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
-​
+
 set -g @continuum-save-interval '15'
 set -g @continuum-restore 'on'
 set -g @resurrect-capture-pane-contents 'on'
 ​
-# Other config ...
+# Other config ... 
+
 ​
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
@@ -151,6 +152,20 @@ PREFIX + CTRL s：保存会话
 PREFIX + CTRL r：加载会话
 ```
 ### tmux-yank 和系统剪切板共用
+必须装有`xsel`或者`xclip`
 ```
-set -g @plugin 'tmux-plugins/tmux-yank
+set -g @plugin 'tmux-plugins/tmux-yank'
+```
+普通模式：
+
+`PREFIX-y`复制当前光标后内容到剪切板
+
+复制模式：按下`PREFIX-[`进入
+
+`PREFIX-space`选中内容后，按下`y`复制,按下`Y`复制并且粘贴到当前命令行
+
+当然你也可以在`tmux.conf`中设置默认交互的剪切板
+```
+# ~/.tmux.conf
+set -g @yank_selection 'primary' # or 'secondary' or 'clipboard'
 ```
