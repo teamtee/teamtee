@@ -215,11 +215,11 @@ pluginsConfig: {
 > Optional information to help a user be more successful.
 
 
-
+（这个似乎无效）
 > [!IMPORTANT]
 > Essential information required for user success.
 
-
+（这个似乎无效）
 > [!CAUTION]
 > Negative potential consequences of an action.
 
@@ -230,33 +230,38 @@ pluginsConfig: {
 > [!NOTE]
 > Information the user should notice even if skimming.
 
-22
+分隔符
+
 > [!TIP]
 > Optional information to help a user be more successful.
 
+分隔符
 
-22
-> [!IMPORTANT]
-> Essential information required for user success.
-
-22
-> [!CAUTION]
-> Negative potential consequences of an action.
-
-22
 > [!WARNING]
 > Dangerous certain consequences of an action.
+
+
 拓展玩法：自定义引用
+有关图标可以在这里[寻找](https://fontawesome.com/icons/download?f=classic&s=thin)
 ```
 //自定义类型，className可能有info,warning,tip,note
+   pluginsConfig: {
+    "flexible-alerts": {
+      style: "flat" // callout 或 flat
       "comment": {
         "label": "Comment",
         "icon": "fa fa-comments",
         "className": "info"
       }
+    }
+  }    
 
 ```
+> [!Comment]
+> Dangerous certain consequences of an action.
+
 [数学插件](https://github.com/GitbookIO/plugin-mathjax)
+
 `mathjax`有问题，总是安装不了，无意间发现了`katex`可以直接安装
 ```
 {

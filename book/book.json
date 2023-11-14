@@ -39,7 +39,15 @@
           "multipleH4": false,
           "showLevelIcon": true,
           "showLevel": false
-        }
+        },
+        "flexible-alerts": {
+          "style": "flat", 
+          "comment": {
+            "label": "Comment",
+            "icon": "fa fa-comments",
+            "className": "info"
+      }
+    }
     },
       "variables": {
     }

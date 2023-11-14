@@ -1,15 +1,58 @@
 ## 优化器Optim
 优化即为寻找最小loss的过程，通常采用梯度下降的算法，关于移动的方向在深度学习里基本上是沿着梯度的方向，但是对于移动的距离，会有不同的解法，朝着所有样本的梯度方向移动是数学里梯度下降法的做法，但是不适合深度学习。
 
-SGD：朝着每一个批次的梯度方向移动
+SGD：朝着当前批次的梯度方向移动
+$$
+\theta_t = \theta_{t-1} - \eta g_{t-1}
+$$
+SGDM：朝着当前批次批次和上一次批次的联合梯度方向移动
+$$
+v = - \eta g_{t-1} 
+$$
+$$
+\theta_t = \theta_{t-1} + v_t + m v_{t-1}
+$$
+Adagrad：朝着当前批次的梯度方向移动，但是大小要考虑过去的梯度均方值
+$$
+\theta_t = \theta_{t-1} - \frac{\eta}{\sqrt{\sum_{i=0}^{t-1} g_i^2 }} g_{t-1}
+$$
+RMSPro：朝着当前批次的梯度方向移动，但是大小要考虑过去的梯度均方值递减
 
-SGDM：朝着每一个批次和上一次批次的联合梯度方向移动
+$$
+v_1 = g_0
+$$
+$$
+v_t =\alpha v_{t-1} + (1- \alpha) g_{t-1}^2
+$$
+$$
+\theta_t = \theta_{t-1} - \frac{\eta}{\sqrt{v_t}} g_{t-1}
+$$
 
-Adagrad：
+（和Adagrad比较更好，因为过去的梯度会累积到很大，会导致后面梯度非常小）
 
-RMSPro：
+Adam：SGDM + RMSPro
+![](media/16998668922062.jpg)
 
-Adam：
+Tacotron\Bert\Transformer\Big-gan\MEMO：Adam
+YOLO\Mask RNN\Resnet\Mask RNN：SGDM
+
+比较：Adam和SGDM
+Adam：训练较快，但是泛化性不好
+SGDM：训练较慢，但是泛化性好
+
+SWATS：Adam->SGDM
+
+解决Adam问题：
+（1）小的梯度累积会影响突然出现的大梯度：很有可能只有少部分批次会提供大的梯度，但是大的梯度在小的梯度累积下只会走很小的距离
+AMSGrad
+![](media/16998697843968.jpg)
+AdaBound
+![](media/16998698687703.jpg)
+提升SGDM：
+![](media/16998699977684.jpg)
+
+![](media/16998700463672.jpg)
+![](media/16998700690675.jpg)
 
 ### 
 
