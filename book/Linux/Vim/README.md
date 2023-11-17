@@ -11,7 +11,7 @@
 
 ## 拓展
 ### 如何让Vim和Linux共用剪切板
-
+实测安装vim-gtk3后vim匿名寄存器直接变为系统剪切板
 ### +clipboard
 参考[教程](https://vi.stackexchange.com/questions/84/how-can-i-copy-text-to-the-system-clipboard-from-vim)
 

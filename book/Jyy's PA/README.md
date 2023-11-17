@@ -2,6 +2,9 @@
 
 这是我在2023年夯实我基础的首个课程笔记，欢迎大家观看！
 
+TODOLIST：
+gcc的替代品
+手动选择文件的命令
 ## PA0
 
 
@@ -79,51 +82,12 @@ typedef struct {
 
 30-39字体颜色，40-49背景颜色：黑红绿黄蓝紫青白
 
-## 附录
+#### Kconfig
 
-### C regular实例
-下面是一个简单的示例
+这里是一份[教程](https://docs.kernel.org/kbuild/kconfig-language.html)
 
-```c 
-#include <stdint.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <regex.h>
+#### sizeof和 strlen
+这里是一份[教程](https://www.runoob.com/w3cnote/strlen-and-sizeof.html)
 
-#define ARRAY_SIZE(arr) (sizeof((arr)) / sizeof((arr)[0]))
+#define ARRLE(arr) int(sizof(arr)/sizeof(arr[0]))
 
-static const char *const str =
-       "1) John Driverhacker;\n2) John Doe;\n3) John Foo;\n";
-static const char *const re = "John.*o";
-
-int main(void)
-{
-   static const char *s = str;
-   regex_t     regex;
-   regmatch_t  pmatch[1];
-   regoff_t    off, len;
-
-   if (regcomp(&regex, re, REG_EXTENDED))
-       exit(EXIT_FAILURE);
-
-   printf("String = \"%s\"\n", str);
-   printf("Matches:\n");
-
-   for (int i = 0; ; i++) {
-       if (regexec(&regex, s, ARRAY_SIZE(pmatch), pmatch, 0))
-           break;
-
-       off = pmatch[0].rm_so + (s - str);
-       len = pmatch[0].rm_eo - pmatch[0].rm_so;
-       printf("#%d:\n", i);
-       printf("offset = %jd; length = %jd\n", (intmax_t) off,
-               (intmax_t) len);
-       printf("substring = \"%.*s\"\n", len, s + pmatch[0].rm_so);
-
-       s += pmatch[0].rm_eo;
-   }
-
-   exit(EXIT_SUCCESS);
-}
-
-```
