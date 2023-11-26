@@ -91,3 +91,5 @@ typedef struct {
 
 #define ARRLE(arr) int(sizof(arr)/sizeof(arr[0]))
 
+### RISC-V
+这里是一份很好的RISC-V 32的[资料](chrome-extension://bocbaocobfecmglnmeaeppambideimao/pdf/viewer.html?file=https%3A%2F%2Fusers.sussex.ac.uk%2F~mfb21%2Fcompilers%2Fslides%2F11-handout.pdf)

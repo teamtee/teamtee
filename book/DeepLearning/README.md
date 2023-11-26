@@ -132,6 +132,14 @@ GRU只有重置门、更新门，没有隐藏记忆单元，会生成隐藏状�
 #### 拓展
 Sequence to Sequence AutoDecoder
 
+#### Pytorch 关于RNN的函数
+Pytorch中关于RNN的函数有下面四个，其中nn.RNNBase只是三者共同的祖先，没有forward函数
+```
+nn.RNNBase
+nn.RNN
+nn.LSTM
+nn.GRU
+```
 
 ### Transformer
 
