@@ -144,7 +144,14 @@ nn.GRU
 ### Transformer
 
 `Transformer`完全是基于`Attention`和`Seq to Seq`的模型,论文原文如下[Attention Is All You Need](https://arxiv.org/abs/1706.03762),有关`Transformer`的讲解我不再重复造轮子，请参考[Transformer精讲](https://adaning.github.io/posts/6744.html)，[The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
-
+#### Pytorch中关于Transformer的函数
+```
+nn.Transformer
+nn.TransformerEncoder
+nn.TransformerDecoder
+nn.TransformerEncoderLayer
+nn.TransformerDecoderLayer
+```
 
 ## 参考资料
 动手学深度学习v2

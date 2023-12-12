@@ -260,6 +260,49 @@ pluginsConfig: {
 > [!Comment]
 > Dangerous certain consequences of an action.
 
+[引用插件]
+```
+{
+  plugins: ['alerts'];
+}
+```
+效果如下，支持info，waring，danger，successs
+```
+> **[info] For info**
+>
+> Use this for infomation messages.
+```
+> **[info] For info**
+>
+> Use this for infomation messages.
+
+```
+> **[warning] For warning**
+>
+> Use this for warning messages.
+```
+> **[warning] For warning**
+>
+> Use this for warning messages.
+
+```
+> **[danger] For danger**
+>
+> Use this for danger messages.
+```
+> **[danger] For danger**
+>
+> Use this for infomation messages
+
+```
+> **[success] For success**
+>
+> Use this for success messages.
+```
+> **[success] For success**
+>
+> Use this for success messages.
+
 [数学插件](https://github.com/GitbookIO/plugin-mathjax)
 
 `mathjax`有问题，总是安装不了，无意间发现了`katex`可以直接安装

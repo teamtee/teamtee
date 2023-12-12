@@ -11,6 +11,7 @@
         "code",
         "-expandable-chapters",
         "-back-to-top-button",
+        "alerts",
         "flexible-alerts",
         "anchors",
         "ga",
@@ -20,7 +21,8 @@
         "remove-published-with-link",
         "theme-comscore",
         "pageview-count",
-        "katex"
+        "katex",
+        "videoplayer"
 
       ],
 
@@ -46,9 +48,15 @@
             "label": "Comment",
             "icon": "fa fa-comments",
             "className": "info"
-      }
-    }
-    },
-      "variables": {
-    }
+        },
+          "question": {
+                "label": "Question",
+                "icon": "fa fa-question",
+                "className": "info"
+        }
+        
+        }
+        },
+          "variables": {
+        }
 }

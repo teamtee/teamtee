@@ -31,6 +31,7 @@ df.dtypes
 df.shape
 ### 数据索引
 注意你的到的数据通常和原数据是同一份，修改会改变两者
+```
 df["age"]
 df[["age","sex"]]
 df[df["age"]>35]
@@ -42,6 +43,7 @@ df[df["Age"].notna()]
 df.loc[df["Age"] > 35, "Name"]
 df.iloc[9:25, 2:5]
 df.iloc[0:3, 3] = "anonymous"
+```
 ### 统计操作
 对`series`可以求`max`、`mean`、`median`，对于`dataFrame`可以求`corr`,也可以通过`describe`查看多个统计值列表，还可以通过`value_counts`统计出现的次数
 
@@ -154,6 +156,7 @@ Out[4]:
 
 ```
 ### 绘制
+```
 ['area',
  'bar',
  'barh',
@@ -165,6 +168,7 @@ Out[4]:
  'line',
  'pie',
  'scatter']
+ ```
 ```
 df.plot()
 plt.show()

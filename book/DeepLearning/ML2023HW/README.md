@@ -128,7 +128,7 @@ Batchnormal放在激活函数前
 | 0.72   | 0.741 | 1e-4 | 250   | 1213 | 512   | Adam  | CrossEntropyLoss | MLP(Droupout=0.5,Batchnorm) | layer=2,dim= 1024 | connect=19 |
 | 0.80（184）   | 0.748（184） | 1e-4 | 250   | 1213 | 256   | Adam  | CrossEntropyLoss | MLP(Droupout=0.5,Batchnorm) | layer=2,dim= 1024 | connect=19 |
 | 0.81（302）   | 0.751（301） | 1e-4 | 250   | 1213 | 512   | Adam  | CrossEntropyLoss | MLP(Droupout=0.5,Batchnorm) | layer=2,dim= 2048 | connect=19 |
-|    |  | 1e-4 | 250   | 1213 | 512   | Adam  | CrossEntropyLoss | MLP(Droupout=0.5,Batchnorm) | layer=2,dim= 1024 | connect=19 |
+
 ### 关于weight_decay
 | 训练集 | acc  | lr   | epoch | seed | batch | optim           | loss             | model                       | model_params      | feature    |
 |:------:|:----:|:----:|:-----:|:----:|:-----:|:---------------:|:----------------:|:---------------------------:|:-----------------:|:----------:|
@@ -164,10 +164,9 @@ LSTM
 
 | 训练集   | acc      | lr   | seed | batch | optim | loss             | model                                                                | feature    |
 |:--------:|:--------:|:----:|:----:|:-----:|:-----:|:----------------:|:--------------------------------------------------------------------:|:----------:|
-| 0.95     | 0.71     | 1e-4 | 1213 | 512   | Adam  | CrossEntropyLoss | LSTM(droupout=0.5,layer=2,dim=512)+fc(line)                          | connect=19 |
-| 0.95(42) | 0.70(8)  | 1e-4 | 1213 | 512   | Adam  | CrossEntropyLoss | LSTM(droupout=0.5,layer=2,dim=512)+fc(line)                          | connect=19 |
 | 0.97（56） | 0.72（5）  | 1e-4 | 1213 | 512   | Adam  | CrossEntropyLoss | LSTM(droupout=0.5,layer=2,dim=512)+fc(line)                          | connect=19 |
-| 0.98（56） | 0.72（7）  | 1e-4 | 1213 | 128   | Adam  | CrossEntropyLoss | LSTM(droupout=0.5,layer=2,dim=512)+fc(line)                          | connect=19 |
-| 0.98（71） | 0.70（71） | 1e-5 | 1213 | 128   | Adam  | CrossEntropyLoss | LSTM(droupout=0.5,layer=2,dim=512)+fc(line)                          | connect=19 |
 | 0.84（14） | 0.734（8） | 1e-4 | 1213 | 128   | Adam  | CrossEntropyLoss | prefc(line+Droupout=0.5)+LSTM(droupout=0.5,layer=2,dim=512)+fc(line) | connect=19 |
 | 0.84（14） | 0.734（8） | 1e-5 | 1213 | 128   | Adam  | CrossEntropyLoss | prefc(line+Droupout=0.5)+LSTM(droupout=0.5,layer=2,dim=512)+fc(line) | connect=19 |
+| 0.86（212）0.76(33) | 0.74（33） | 1e-4 | 1213 | 1024   | Adam  | CrossEntropyLoss | prefc(line+Droupout=0.5)+LSTM(droupout=0.5,layer=2,dim=512)+fc(line) | connect=19 |
+| 0.77（47）0.85(212) | 0.74（47）0.69(212) | 1e-4 | 1213 | 2048   | Adam  | CrossEntropyLoss | prefc(line+Droupout=0.5)+LSTM(droupout=0.5,layer=2,dim=512)+fc(line) | connect=19 |
+| 0.92（45）0.86(18) | 0.762（18）0.73(45) | 1e-4 | 1213 | 512  | Adam  | CrossEntropyLoss | prefc(line+Droupout=0.5)+LSTM(droupout=0.5,layer=6,dim=450)+fc(line) | connect=27 |

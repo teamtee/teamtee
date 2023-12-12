@@ -10,12 +10,15 @@
     * [Make](Linux/Make/README.md)
 * [Computer science](Computer science/README.md)
     * [Jyy's PA](Computer science/Jyy's PA/README.md)
+    * [Compliers](Computer science/Compliers/README.md)
+        * [RSVC-V32](Computer science/Compliers/RISC-V32/README.md)
 * [Tutorial](Tutorial/README.md)
     * [Linux/ssh](Tutorial/Dian/Linux/README.md)
     * [Git](Tutorial/Dian/Git/README.md)
 * [DeepLearning](DeepLearning/README.md)
     * [ML2023HW](DeepLearning/ML2023HW/README.md)
     * [Pandas](DeepLearning/Pandas/README.md)
+    * [Matplotlib](DeepLearning/matplotlib/README.md)
 * [Leetcode](Leetcode/README.md)
 ----
 

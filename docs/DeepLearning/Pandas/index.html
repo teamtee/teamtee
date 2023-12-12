@@ -25,6 +25,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
                 
             
@@ -93,7 +97,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../Leetcode/" />
+    <link rel="next" href="../matplotlib/" />
     
     
     <link rel="prev" href="../ML2023HW/" />
@@ -281,6 +285,38 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4.2" data-path="../../Computer science/Compliers/">
+            
+                <a href="../../Computer science/Compliers/">
+            
+                    
+                    Compliers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../Computer science/Compliers/RISC-V32/">
+            
+                <a href="../../Computer science/Compliers/RISC-V32/">
+            
+                    
+                    RSVC-V32
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -364,6 +400,19 @@
             
                     
                     Pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../matplotlib/">
+            
+                <a href="../matplotlib/">
+            
+                    
+                    Matplotlib
             
                 </a>
             
@@ -460,18 +509,19 @@ df.info
 df.dtypes
 df.shape</p>
 <h3 id="&#x6570;&#x636E;&#x7D22;&#x5F15;"><a name="&#x6570;&#x636E;&#x7D22;&#x5F15;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x7D22;&#x5F15;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6570;&#x636E;&#x7D22;&#x5F15;" class="plugin-anchor" href="#&#x6570;&#x636E;&#x7D22;&#x5F15;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x7D22;&#x5F15;</h3>
-<p>&#x6CE8;&#x610F;&#x4F60;&#x7684;&#x5230;&#x7684;&#x6570;&#x636E;&#x901A;&#x5E38;&#x548C;&#x539F;&#x6570;&#x636E;&#x662F;&#x540C;&#x4E00;&#x4EFD;&#xFF0C;&#x4FEE;&#x6539;&#x4F1A;&#x6539;&#x53D8;&#x4E24;&#x8005;
-df[&quot;age&quot;]
+<p>&#x6CE8;&#x610F;&#x4F60;&#x7684;&#x5230;&#x7684;&#x6570;&#x636E;&#x901A;&#x5E38;&#x548C;&#x539F;&#x6570;&#x636E;&#x662F;&#x540C;&#x4E00;&#x4EFD;&#xFF0C;&#x4FEE;&#x6539;&#x4F1A;&#x6539;&#x53D8;&#x4E24;&#x8005;</p>
+<pre><code>df[&quot;age&quot;]
 df[[&quot;age&quot;,&quot;sex&quot;]]
 df[df[&quot;age&quot;]&gt;35]
 df[&quot;age&quot;]&gt;35
 df[df[&quot;Pclass&quot;].isin([2, 3])]
 df[(df[&quot;Pclass&quot;] == 2) | (df[&quot;Pclass&quot;] == 3)]
-df[df[&quot;Age&quot;].notna()]</p>
-<p>df.loc[df[&quot;Age&quot;] &gt; 35, &quot;Name&quot;]
+df[df[&quot;Age&quot;].notna()]
+
+df.loc[df[&quot;Age&quot;] &gt; 35, &quot;Name&quot;]
 df.iloc[9:25, 2:5]
-df.iloc[0:3, 3] = &quot;anonymous&quot;</p>
-<h3 id="&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;"><a name="&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;</h3>
+df.iloc[0:3, 3] = &quot;anonymous&quot;
+</code></pre><h3 id="&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;"><a name="&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;</h3>
 <p>&#x5BF9;<code>series</code>&#x53EF;&#x4EE5;&#x6C42;<code>max</code>&#x3001;<code>mean</code>&#x3001;<code>median</code>&#xFF0C;&#x5BF9;&#x4E8E;<code>dataFrame</code>&#x53EF;&#x4EE5;&#x6C42;<code>corr</code>,&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>describe</code>&#x67E5;&#x770B;&#x591A;&#x4E2A;&#x7EDF;&#x8BA1;&#x503C;&#x5217;&#x8868;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>value_counts</code>&#x7EDF;&#x8BA1;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;</p>
 <p><code>agg</code>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x591A;&#x4E2A;&#x7EDF;&#x8BA1;&#x91CF;&#x805A;&#x7C7B;&#x5206;&#x6790;</p>
 <pre><code>In [7]: titanic.agg(
@@ -559,7 +609,7 @@ Out[4]:
 2  A2  B2  K2  C2  D2
 3  A3  B3  K3  C3  D3
 </code></pre><h3 id="&#x7ED8;&#x5236;"><a name="&#x7ED8;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x7ED8;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7ED8;&#x5236;" class="plugin-anchor" href="#&#x7ED8;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ED8;&#x5236;</h3>
-<p>[&apos;area&apos;,
+<pre><code>[&apos;area&apos;,
  &apos;bar&apos;,
  &apos;barh&apos;,
  &apos;box&apos;,
@@ -569,8 +619,8 @@ Out[4]:
  &apos;kde&apos;,
  &apos;line&apos;,
  &apos;pie&apos;,
- &apos;scatter&apos;]</p>
-<pre><code>df.plot()
+ &apos;scatter&apos;]
+</code></pre><pre><code>df.plot()
 plt.show()
 </code></pre><h3 id="&#x6620;&#x5C04;&#x64CD;&#x4F5C;"><a name="&#x6620;&#x5C04;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x6620;&#x5C04;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6620;&#x5C04;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x6620;&#x5C04;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6620;&#x5C04;&#x64CD;&#x4F5C;</h3>
 <p>&#x53C2;&#x8003;&#x8FD9;&#x7BC7;<a href="https://zhuanlan.zhihu.com/p/100064394" target="_blank">&#x6587;&#x7AE0;</a>
@@ -644,7 +694,7 @@ df.applymap(lambda x:&quot;%.2f&quot; % x)
                 </a>
                 
                 
-                <a href="../../Leetcode/" class="navigation navigation-next " aria-label="Next page: Leetcode">
+                <a href="../matplotlib/" class="navigation navigation-next " aria-label="Next page: Matplotlib">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -655,7 +705,7 @@ df.applymap(lambda x:&quot;%.2f&quot; % x)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Pandas","level":"1.6.2","depth":2,"next":{"title":"Leetcode","level":"1.7","depth":1,"path":"Leetcode/README.md","ref":"Leetcode/README.md","articles":[]},"previous":{"title":"ML2023HW","level":"1.6.1","depth":2,"path":"DeepLearning/ML2023HW/README.md","ref":"DeepLearning/ML2023HW/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["search-pro","code","-expandable-chapters","-back-to-top-button","flexible-alerts","anchors","ga","collapsible-chapters","-page-toc-button","anchor-navigation-ex","remove-published-with-link","theme-comscore","pageview-count","katex"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"search-pro":{},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":true,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"theme-comscore":{},"pageview-count":{},"remove-published-with-link":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"ga":{"configuration":"auto","token":"UA-XXXX-Y"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"teamtee","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"xx","variables":{},"title":"teamtee's home","gitbook":"*","description":"a book for writting and reading"},"file":{"path":"DeepLearning/Pandas/README.md","mtime":"2023-11-09T08:06:50.339Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-26T10:32:42.536Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Pandas","level":"1.6.2","depth":2,"next":{"title":"Matplotlib","level":"1.6.3","depth":2,"path":"DeepLearning/matplotlib/README.md","ref":"DeepLearning/matplotlib/README.md","articles":[]},"previous":{"title":"ML2023HW","level":"1.6.1","depth":2,"path":"DeepLearning/ML2023HW/README.md","ref":"DeepLearning/ML2023HW/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["search-pro","code","-expandable-chapters","-back-to-top-button","alerts","flexible-alerts","anchors","ga","collapsible-chapters","-page-toc-button","anchor-navigation-ex","remove-published-with-link","theme-comscore","pageview-count","katex","videoplayer","livereload"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":true,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"theme-comscore":{},"pageview-count":{},"alerts":{},"remove-published-with-link":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"question":{"label":"Question","icon":"fa fa-question","className":"info"}},"ga":{"configuration":"auto","token":"UA-XXXX-Y"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"videoplayer":{},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"teamtee","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"xx","variables":{},"title":"teamtee's home","gitbook":"*","description":"a book for writting and reading"},"file":{"path":"DeepLearning/Pandas/README.md","mtime":"2023-12-10T09:56:19.166Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-11T07:43:31.903Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -677,6 +727,10 @@ df.applymap(lambda x:&quot;%.2f&quot; % x)
         
     
         
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
         <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
         
     
@@ -694,6 +748,10 @@ df.applymap(lambda x:&quot;%.2f&quot; % x)
     
         
         <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

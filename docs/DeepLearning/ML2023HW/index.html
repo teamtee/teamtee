@@ -25,6 +25,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
                 
             
@@ -281,6 +285,38 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4.2" data-path="../../Computer science/Compliers/">
+            
+                <a href="../../Computer science/Compliers/">
+            
+                    
+                    Compliers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../Computer science/Compliers/RISC-V32/">
+            
+                <a href="../../Computer science/Compliers/RISC-V32/">
+            
+                    
+                    RSVC-V32
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -364,6 +400,19 @@
             
                     
                     Pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../matplotlib/">
+            
+                <a href="../matplotlib/">
+            
+                    
+                    Matplotlib
             
                 </a>
             
@@ -1202,19 +1251,6 @@
 <td style="text-align:center">layer=2,dim= 2048</td>
 <td style="text-align:center">connect=19</td>
 </tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">1e-4</td>
-<td style="text-align:center">250</td>
-<td style="text-align:center">1213</td>
-<td style="text-align:center">512</td>
-<td style="text-align:center">Adam</td>
-<td style="text-align:center">CrossEntropyLoss</td>
-<td style="text-align:center">MLP(Droupout=0.5,Batchnorm)</td>
-<td style="text-align:center">layer=2,dim= 1024</td>
-<td style="text-align:center">connect=19</td>
-</tr>
 </tbody>
 </table>
 <h3 id="&#x5173;&#x4E8E;weightdecay"><a name="&#x5173;&#x4E8E;weightdecay" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x4E8E;weightdecay"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5173;&#x4E8E;weightdecay" class="plugin-anchor" href="#&#x5173;&#x4E8E;weightdecay"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x4E8E;weight_decay</h3>
@@ -1463,28 +1499,6 @@ GRU
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">0.95</td>
-<td style="text-align:center">0.71</td>
-<td style="text-align:center">1e-4</td>
-<td style="text-align:center">1213</td>
-<td style="text-align:center">512</td>
-<td style="text-align:center">Adam</td>
-<td style="text-align:center">CrossEntropyLoss</td>
-<td style="text-align:center">LSTM(droupout=0.5,layer=2,dim=512)+fc(line)</td>
-<td style="text-align:center">connect=19</td>
-</tr>
-<tr>
-<td style="text-align:center">0.95(42)</td>
-<td style="text-align:center">0.70(8)</td>
-<td style="text-align:center">1e-4</td>
-<td style="text-align:center">1213</td>
-<td style="text-align:center">512</td>
-<td style="text-align:center">Adam</td>
-<td style="text-align:center">CrossEntropyLoss</td>
-<td style="text-align:center">LSTM(droupout=0.5,layer=2,dim=512)+fc(line)</td>
-<td style="text-align:center">connect=19</td>
-</tr>
-<tr>
 <td style="text-align:center">0.97&#xFF08;56&#xFF09;</td>
 <td style="text-align:center">0.72&#xFF08;5&#xFF09;</td>
 <td style="text-align:center">1e-4</td>
@@ -1496,28 +1510,6 @@ GRU
 <td style="text-align:center">connect=19</td>
 </tr>
 <tr>
-<td style="text-align:center">0.98&#xFF08;56&#xFF09;</td>
-<td style="text-align:center">0.72&#xFF08;7&#xFF09;</td>
-<td style="text-align:center">1e-4</td>
-<td style="text-align:center">1213</td>
-<td style="text-align:center">128</td>
-<td style="text-align:center">Adam</td>
-<td style="text-align:center">CrossEntropyLoss</td>
-<td style="text-align:center">LSTM(droupout=0.5,layer=2,dim=512)+fc(line)</td>
-<td style="text-align:center">connect=19</td>
-</tr>
-<tr>
-<td style="text-align:center">0.98&#xFF08;71&#xFF09;</td>
-<td style="text-align:center">0.70&#xFF08;71&#xFF09;</td>
-<td style="text-align:center">1e-5</td>
-<td style="text-align:center">1213</td>
-<td style="text-align:center">128</td>
-<td style="text-align:center">Adam</td>
-<td style="text-align:center">CrossEntropyLoss</td>
-<td style="text-align:center">LSTM(droupout=0.5,layer=2,dim=512)+fc(line)</td>
-<td style="text-align:center">connect=19</td>
-</tr>
-<tr>
 <td style="text-align:center">0.84&#xFF08;14&#xFF09;</td>
 <td style="text-align:center">0.734&#xFF08;8&#xFF09;</td>
 <td style="text-align:center">1e-4</td>
@@ -1538,6 +1530,39 @@ GRU
 <td style="text-align:center">CrossEntropyLoss</td>
 <td style="text-align:center">prefc(line+Droupout=0.5)+LSTM(droupout=0.5,layer=2,dim=512)+fc(line)</td>
 <td style="text-align:center">connect=19</td>
+</tr>
+<tr>
+<td style="text-align:center">0.86&#xFF08;212&#xFF09;0.76(33)</td>
+<td style="text-align:center">0.74&#xFF08;33&#xFF09;</td>
+<td style="text-align:center">1e-4</td>
+<td style="text-align:center">1213</td>
+<td style="text-align:center">1024</td>
+<td style="text-align:center">Adam</td>
+<td style="text-align:center">CrossEntropyLoss</td>
+<td style="text-align:center">prefc(line+Droupout=0.5)+LSTM(droupout=0.5,layer=2,dim=512)+fc(line)</td>
+<td style="text-align:center">connect=19</td>
+</tr>
+<tr>
+<td style="text-align:center">0.77&#xFF08;47&#xFF09;0.85(212)</td>
+<td style="text-align:center">0.74&#xFF08;47&#xFF09;0.69(212)</td>
+<td style="text-align:center">1e-4</td>
+<td style="text-align:center">1213</td>
+<td style="text-align:center">2048</td>
+<td style="text-align:center">Adam</td>
+<td style="text-align:center">CrossEntropyLoss</td>
+<td style="text-align:center">prefc(line+Droupout=0.5)+LSTM(droupout=0.5,layer=2,dim=512)+fc(line)</td>
+<td style="text-align:center">connect=19</td>
+</tr>
+<tr>
+<td style="text-align:center">0.92&#xFF08;45&#xFF09;0.86(18)</td>
+<td style="text-align:center">0.762&#xFF08;18&#xFF09;0.73(45)</td>
+<td style="text-align:center">1e-4</td>
+<td style="text-align:center">1213</td>
+<td style="text-align:center">512</td>
+<td style="text-align:center">Adam</td>
+<td style="text-align:center">CrossEntropyLoss</td>
+<td style="text-align:center">prefc(line+Droupout=0.5)+LSTM(droupout=0.5,layer=6,dim=450)+fc(line)</td>
+<td style="text-align:center">connect=27</td>
 </tr>
 </tbody>
 </table>
@@ -1600,7 +1625,7 @@ GRU
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ML2023HW","level":"1.6.1","depth":2,"next":{"title":"Pandas","level":"1.6.2","depth":2,"path":"DeepLearning/Pandas/README.md","ref":"DeepLearning/Pandas/README.md","articles":[]},"previous":{"title":"DeepLearning","level":"1.6","depth":1,"path":"DeepLearning/README.md","ref":"DeepLearning/README.md","articles":[{"title":"ML2023HW","level":"1.6.1","depth":2,"path":"DeepLearning/ML2023HW/README.md","ref":"DeepLearning/ML2023HW/README.md","articles":[]},{"title":"Pandas","level":"1.6.2","depth":2,"path":"DeepLearning/Pandas/README.md","ref":"DeepLearning/Pandas/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["search-pro","code","-expandable-chapters","-back-to-top-button","flexible-alerts","anchors","ga","collapsible-chapters","-page-toc-button","anchor-navigation-ex","remove-published-with-link","theme-comscore","pageview-count","katex"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"search-pro":{},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":true,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"theme-comscore":{},"pageview-count":{},"remove-published-with-link":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"ga":{"configuration":"auto","token":"UA-XXXX-Y"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"teamtee","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"xx","variables":{},"title":"teamtee's home","gitbook":"*","description":"a book for writting and reading"},"file":{"path":"DeepLearning/ML2023HW/README.md","mtime":"2023-11-24T03:02:39.411Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-11-26T10:32:42.536Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ML2023HW","level":"1.6.1","depth":2,"next":{"title":"Pandas","level":"1.6.2","depth":2,"path":"DeepLearning/Pandas/README.md","ref":"DeepLearning/Pandas/README.md","articles":[]},"previous":{"title":"DeepLearning","level":"1.6","depth":1,"path":"DeepLearning/README.md","ref":"DeepLearning/README.md","articles":[{"title":"ML2023HW","level":"1.6.1","depth":2,"path":"DeepLearning/ML2023HW/README.md","ref":"DeepLearning/ML2023HW/README.md","articles":[]},{"title":"Pandas","level":"1.6.2","depth":2,"path":"DeepLearning/Pandas/README.md","ref":"DeepLearning/Pandas/README.md","articles":[]},{"title":"Matplotlib","level":"1.6.3","depth":2,"path":"DeepLearning/matplotlib/README.md","ref":"DeepLearning/matplotlib/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["search-pro","code","-expandable-chapters","-back-to-top-button","alerts","flexible-alerts","anchors","ga","collapsible-chapters","-page-toc-button","anchor-navigation-ex","remove-published-with-link","theme-comscore","pageview-count","katex","videoplayer","livereload"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":true,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"theme-comscore":{},"pageview-count":{},"alerts":{},"remove-published-with-link":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"question":{"label":"Question","icon":"fa fa-question","className":"info"}},"ga":{"configuration":"auto","token":"UA-XXXX-Y"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"videoplayer":{},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"teamtee","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"xx","variables":{},"title":"teamtee's home","gitbook":"*","description":"a book for writting and reading"},"file":{"path":"DeepLearning/ML2023HW/README.md","mtime":"2023-12-06T12:33:55.336Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-11T07:43:31.903Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1622,6 +1647,10 @@ GRU
         
     
         
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
         <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
         
     
@@ -1639,6 +1668,10 @@ GRU
     
         
         <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
