@@ -153,18 +153,16 @@ u8 R[] = {
 ```
 // breaks when adding a register
 #define NREG 5 // 隐藏假设max{RA, RB, ... PC} == (NREG - 1)
-
 // breaks when changing register size
 #define NREG (sizeof(R) / sizeof(u8)) // 隐藏假设寄存器是8-bit
-
 // never breaks
 #define NREG (sizeof(R) / sizeof(R[0])) // 但需要R的定义
-
 // even better (why?)
 enum { RA, ... , PC, NREG }
 ```
 
 ---
+
 
 > **[info]编写可读的代码**
 > 
@@ -175,7 +173,6 @@ typedef union inst {
 } inst_t;
 #define RTYPE(i) u8 rt = (i)->rtype.rt, rs = (i)->rtype.rs;
 #define MTYPE(i) u8 addr = (i)->mtype.addr;
-
 void idex() {
   inst_t *cur = (inst_t *)&M[pc];
   switch (cur->rtype.op) {
@@ -214,14 +211,16 @@ vim **/main.c
 > 实际上grep命令是“Global Regular Expression Print”的缩写，
 > -n显示行号，-s不显示匹配失败的信息，-e指定匹配模式（不知道是啥）
 
-
+---
 
 > **[info] man**
 `man getopt`和`man 3 getopt`的区别是，前者查看命令行工具，后者查看C标准库，也可以说用`man -k getopt`
 
+---
+
 > **[info] static与inline**
 > 
-> 一般在头文件中生命，在C文件内定义，但是你的程序较短且性能攸关，则可以使用 static inline 函数定义在头文件中
+> 一般在头文件中声明函数，在C文件内定义函数，但是你的程序较短且性能攸关，则可以使用 static inline 函数定义在头文件中
 
 # Jyy's PA
 ## PA0

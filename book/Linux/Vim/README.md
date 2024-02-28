@@ -116,29 +116,47 @@ ctrl-d/TAB 提示补全
 
 新建立
 vim -o/O 1.txt 2.txt
+
 vimdiff main.c~ main.c
 
 CTLR-w:在窗口间跳转
+
 4CTLR-w +/-:改变大小
+
 CTRL-h/i/j/k:
+
 CTRL-t/b:
+
 :split
+
 :split two.c
+
 :vsplit
+
 :close
+
 :only
+
 :new
+
 :vertical new
+
 :qall
+
 :wall
 
 ### 列块模式
 
 I列编辑
+
 A列添加
+
 ~切换大小写
+
 U小写变大写
+
 u大写变小写
+
 \>右移动
 :set shiftwidth=4
 ## 多文件编辑
