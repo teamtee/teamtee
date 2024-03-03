@@ -5,7 +5,7 @@
     * [Python](课程记录/Python/README.md)
 * [博客日志](博客日志/README.md)
     * [Gitbook](博客日志/Gitbook/README.md)
-        * [Gitbook Explore in Mac](博客日志/Gitbook/Gitbook Explore in Mac/README.md)
+        * [Gitbook的Mac开发环境搭建](博客日志/Gitbook/Gitbook Explore in Mac/README.md)
         * [Markdown语法](博客日志/Gitbook/Markdown语法/README.md)
     * [Tutorial](博客日志/Tutorial/README.md)
         * [Linux/ssh](博客日志/Tutorial/Dian/Linux/README.md)
