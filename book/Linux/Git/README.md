@@ -2,7 +2,7 @@
 这里有一份官方[教程](https://git-scm.com/book/zh/v2/)
 
 ## 基本命令
-
+### git merge
 ### 配置
 常用配置
 ```
@@ -89,4 +89,18 @@ git rebase main branchA
 ```
 git remote set-head origin branchA
 git remote set-head origin -d
+```
+
+## 配置
+
+配置文件
+· system - /etc/gitconfig
+· global - ~/.gitconfig
+· local - .git/.gitconfig
+
+### 配置代理
+
+```
+git config --global https.proxy https://localhost:7890
+git config --global http.proxy http://localhost:7890
 ```
