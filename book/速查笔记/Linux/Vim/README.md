@@ -49,6 +49,8 @@ vim有下面几种模式
 `]c/[c`:跳转到上次修改的地方
 
 `</>`:行内位置跳转
+
+`Ctrl-f/b`:跳转一页
 #### 编辑模式:
 `i`:直接输入
 
@@ -87,32 +89,97 @@ vim有下面几种模式
 `:0read file.txt`:读取第一行
 #### 编辑命令
 
-:substitute
+`substitute/s` 替换命令，命令格式如下
+> [位置]s/旧字符/新字符/[gc]`:g表示所有项，c表示询问每一项
+> 位置：绝对位置(4，6)，相对位置(.-3,&-4),标记位置('<,'>,.m,$,%,^,)
 ```
-`:[位置]s/旧字符/新字符/[gc]`:g表示所有项，c表示询问每一项
 :4,6s/old/new/g # 替换4-6行的内容
 :%s/ld*c/ld/g #替换全文内容
 :'<,'>s// #配合块模式使用
-
-.表示当前光标位置
-
-:.write file.txt
+:.write file.txt:.表示当前光标位置
 :.,$s/yes/no/
 :45s
 :4,5s
-:s+one/two+one or two+ 中，or
-:?^Chapter?,/^Chapter/s=grey=gray=g
 :.+3,$-5s
 ```
-:help
+> 可以用加号+、等号= 替换/
+```
+:s+one/two+one or two+ 中，or
+:?^Chapter?,/^Chapter/s=grey=gray=g
+```
+`help` 帮助命令
 ```
 :help vimrc-intro
 :help user-manual
-ctrl-d/TAB 提示补全
-`:set nocp`设置补全功能
 ```
 
-#### 窗口命令
+
+
+### 列块模式(TODO)
+
+I列编辑
+
+A列添加
+
+~切换大小写
+
+U小写变大写
+
+u大写变小写
+
+\>右移动
+:set shiftwidth=4
+## 多文件编辑
+你可以同时编辑多个文件，这些文件形成文件列表
+
+`vim one.c two.c three.c`,编辑两个文件
+
+或者使用下面的命令
+```
+:args 查看当前文件列表
+:args five.c six.c seven.h 形成新的文件列表
+:argadd 添加文件到文件列表
+:argdel 
+:next 下一个文件
+:previous 上一个文件
+:last 最后一个文件
+:first 第一个文件
+```
+## 寄存器(TODO)
+A会追加内容到寄存器a中，a表示覆盖,Y等于y$
+"aY
+"AY
+
+## 标记mark
+你可以使用标记来跳转，甚至包括跨越文件跳转
+
+### 匿名mark
+当你使用位置跳转时下面会自动记录你的位置，形成一条有序队列
+
+`CTLR-I`：标记往前
+
+`CTLR-O`：标记往后
+
+下面是固定记录的匿名mark
+
+`'`:跳转前光标位置
+
+`"`:上一次编辑位置
+
+`[`:Start of the last change
+
+`]`:End of the last change
+
+
+### 记名mark
+`:marks` 查看所有记命mark
+
+`ma`:标记名为a的mark
+
+\`a:跳转到名为a的mark
+
+`'a`:跳转到名为a的mark
+## 窗口管理(TODO)
 
 新建立
 vim -o/O 1.txt 2.txt
@@ -145,59 +212,6 @@ CTRL-t/b:
 
 :wall
 
-### 列块模式
-
-I列编辑
-
-A列添加
-
-~切换大小写
-
-U小写变大写
-
-u大写变小写
-
-\>右移动
-:set shiftwidth=4
-## 多文件编辑
-
-### 标记mark
-`CTLR-i`:跳转到新位置
-
-`CTLR-o`:跳转到旧位置
-
-`:marks` 查看所有mark
-##### 匿名mark
-当你使用位置跳转时下面会自动记录你的位置
-
-`'`:The cursor position before doing a jump
-
-`"`:The cursor position when last editing the file
-
-`[`:Start of the last change
-
-`]`:End of the last change
-##### 记名mark
-`ma`:标记名为a的mark
-
-\`a:跳转到名为a的mark
-
-`'a`:跳转到名为a的mark
-### 文件列表
-vim one.c two.c three.c
-
-:args
-:args five.c six.c seven.h
-:argadd
-:argdel 
-:next
-:previous
-:last
-:first
-
-:set autowrite
-:set noautowrite
-
 ## 配置文件
 :edit ~/.vimrc          这是 Unix 系统所使用的命令
 :edit ~/_vimrc          这是 MS-Windows 系统所使用的命令
@@ -206,18 +220,19 @@ vim one.c two.c three.c
 
 ### 查看配置
 :options
-:set nowarp
-:set sidescroll=10
-:set list  查看tabs
-:syntax enable
-:syntax off
-:set background=dark
+:set nowarp 自动折叠
+:set sidescroll=10 设置边框滚动条？
+:set list  查看tabs 
+:syntax enable 语法检查
+:syntax off 
+:set background=dark 设置背景
 :colorscheme evening
-### 编辑配置
-:set autowrite
+:set autowrite 自动保存
 :set noautowrite
-:set backup
+:set backup 备份文件
 :set backupext=.bak
+
+
 ## 包
 mkdir -p ~/.vim/pack/fancy    
 在.vimrc中加入
@@ -232,25 +247,9 @@ Amiga           s:vimfiles/plugin
 Macintosh       $VIM:vimfiles:plugin
 Mac OS X        ~/.vim/plugin/
 ```
-###
-
-
-
-## ctags 
-
-## 寄存器
-A会追加内容到寄存器a中，a表示覆盖,Y等于y$
-"aY
-"AY
-## 标签
-
-## 参数列表
-
 
 ## 拓展
-### 如何让Vim和Linux共用剪切板
-实测安装vim-gtk3后vim匿名寄存器直接变为系统剪切板
-### +clipboard
+### 如何让Vim和Linux共用剪切板+clipboard
 参考[教程](https://vi.stackexchange.com/questions/84/how-can-i-copy-text-to-the-system-clipboard-from-vim)
 
 `Vim` 需要`+clipboard`功能标志才能使这些功能发挥作用,你可以通过在 `Vim` 中使用`:echo has('clipboard')`来检查你的 Vim 是否有这个功能，返回1表示有，如果没有，请安装
@@ -259,7 +258,7 @@ A会追加内容到寄存器a中，a表示覆盖,Y等于y$
 - Fedora:安装vim-X11并运行vimx（vim更多信息）。
 - Arch Linux:安装gvim（这也将+clipboard正常启用）
 
-基于X11的系统通常有两个剪切板
+基于X11的系统通常有两个剪切板(比如Linux)
 - PRIMARY - 鼠标选择复制和粘贴
 - CLIPBOARD - `CRTL-c/v` 选择复制和粘贴
 
@@ -291,3 +290,4 @@ vim -R 1.txt
 vim -M 1.txt
 :set modifiable
 :set write
+### c语言跳转-ctags自动建立记名跳转 (TODO)

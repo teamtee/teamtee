@@ -17,6 +17,9 @@
 
 `PREFIX` 默认为`CTRL-b`,按下`PREFIX b :`进入命令模式，按下`PREFIX b ?`查看所有命令,按下`PREFIX b /`查看单个命令
 
+`rename-windows [name]`
+
+`rename-session [name]`
 ## `Tree` 模式
 
 ### `session`
