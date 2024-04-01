@@ -78,6 +78,17 @@ A Tour of C++中文版pdf:[](./media/download.eeworld.com.cn_C%20%20语言导学
 - 资源:[网站](https://kaldi-asr.org/doc/kaldi_for_dummies.html)
 - 作者:
 - 说明:
-
-
+#### Kaldi siki学院
+- 名称:Kaldi Tutorial
+- 类型:网页
+- 资源:[网站](https://kaldi-asr.org/doc/kaldi_for_dummies.html)
+- 作者:
+- 说明:
+### 数据集
+AIshare1 178小时中文对话，400小时
 ### 数字语音处理
+- 名称:
+- 类型:课程
+- 资源:[网站](https://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/104S204/4)
+- 作者:台大教授李琳山
+- 说明:
