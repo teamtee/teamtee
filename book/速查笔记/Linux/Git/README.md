@@ -1,32 +1,87 @@
 # Git
 这里有一份官方[教程](https://git-scm.com/book/zh/v2/)
+## 基本概念
+### 工作区、暂存区、仓库
 
-## 基本命令
-### git merge
-### 配置
-常用配置
+### 提交的名字
+一次提交有三种类型的名字：哈希名(真名)、分支名、Tag名
+![alt text](image.png)
+## 基础用法
+- 修改提交
+```bash
+git add .
+git commit -m " "
+git push
 ```
+- 覆盖上一次提交
+```bash
+git add .
+git commit --amend -m ""
+git push --force
+git log
+```
+
+- 拉取并解决冲突
+```bash
+git fetch
+git merge orgin/main
+git merge abort //合并失败，恢复原状
+```
+- 
+- 设置
+
+```bash
 git config --global core.editor emacs
+git config --global --list
+git config --list --show-origin
+git config --global https.proxy https://localhost:7890
+git config --global http.proxy http://localhost:7890
 ```
-### 基础
-```
+- 查看状态
+```bash
 git status -s
-git rm --cached README
-git rm 
-git mv file_from file_to
-git commit --amend
-
-# 
-git remote add pb https://github.com/paulboone/ticgit
-git tag
-git tag -l "v1.8.5*"
-```
-### 查看
-
-```
+git status 
 git log --oneline --decorate --graph --all
 ```
+- 切换分支
+```bash
+git checkout <branch>
+git checkout - //返回上一次分支
+```
+- 撤销文件修改
+```bash
+git checkout -- <file_path> //修改工作区
+git checkout <branch> -- <file_path>  //修改工作区
+git restore  <file_path> //修改工作区
+git restore --source=HEAD <file_path> //修改工作区
+git reset <branch> <file_path> //撤销暂存区修改
+```
+- 移动HEAD指针
+```bash
+git reset --soft <commit_hash> //不修改工作区、暂存区
+git reset --mixed <commit_hash> //不修改工作区，修改暂存区
+git reset --hard <commit_hash> //修改工作区，修改暂存区
+```
+- tag
+```bash
+git tag
+git tag -l "1.8.5"
+git tag -a v1.4 -m "my version 1.4"
+git tag -a v1.2 9fceb02
+git tag -d v1.4 
+git push origin --tags // tag必须主动push
+```
+- 分支管理
+```bash
+git checkout -b <commit_hash>
 
+```
+- 修改原程
+
+```bash
+git remote set-head origin branchA
+git remote set-head origin -d
+```
 ## 使用技巧
 
 ### .gitignore
@@ -44,22 +99,9 @@ git log --oneline --decorate --graph --all
 ```
 `glob` 模式是指 `shell` 所使用的简化了的正则表达式。 支持`*`，`？`，`[abc]`,`[a-z]`星号。 使用两个星号`**`表示匹配任意中间目录。
 ### 分支指代
---
+
 HEAD～
 
-### reset和checkout 
-分支层面
-```
-git reset --soft HEAD (移动HEAD和分支）
-git reset HEAD （移动HEAD和分支，修改暂存区）
-git reset --hard HEAD （移动HEAD和分支，修改暂存区，工作区）（⚠️）
-git checkout HEAD （移动HEAD，修改暂存区，工作区）
-```
-文件层面
-```
-git reset HEAD file （修改暂存区）
-git checkout HEAD file （修改暂存区，工作区） （⚠️）
-```
 ### resotre
 git restore --sourece --staged --worktree file
 ### 分支合并(TODO) --continue --abort
@@ -68,39 +110,4 @@ git restore --sourece --staged --worktree file
 git stash
 git pull
 git stash pop
-```
-
-```
-git checkout -b branchA
-git add .
-git commit -m ""
-git checkout main
-git reset --hard 
-git pull
-git rebase main branchA
-```
-
-
-### 标签（TODO）
-
-## 有趣命令
-
-### 修改远程HEAD
-```
-git remote set-head origin branchA
-git remote set-head origin -d
-```
-
-## 配置
-
-配置文件
-· system - /etc/gitconfig
-· global - ~/.gitconfig
-· local - .git/.gitconfig
-
-### 配置代理
-
-```
-git config --global https.proxy https://localhost:7890
-git config --global http.proxy http://localhost:7890
 ```

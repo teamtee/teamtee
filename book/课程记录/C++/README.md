@@ -1,3 +1,35 @@
+## C++的初始化
+[参考](https://en.cppreference.com/w/cpp/language/initialization)
+
+### Direct initialization
+- 复制初始化: int a = 5
+- 直接初始化: int a(5)
+复制初始化和列表初始化不会检查类型，支持`narrow-convert`，下面都会被转化为`int`,值为`12`
+```
+int a = 12.5;
+int a(12.5);
+```
+### Uniform initialization 
+- 列表初始化: int a{5}
+这种初始化不允许发生`narrow-convert`，`int a{5.0}`会报错
+
+
+### Structured Binding (C++ 17)
+用于返回多个值
+```C++
+std:: tuple<std::string, std: :string, std:: string>getClassInfo(){
+    std::string className = "Cs106L";
+    std::string buildingName= "Turing Auditorium" ;std: :string language ="C++";
+    return {className, buildingName, language};
+}
+int main(){
+    auto [className, buildingName, language ] = getClassInfo();
+    std: :cout << "Come to " << buildingName
+    << " and join us for " <<className
+    <<" to learn " << language<<"!" << std: :endl;
+    return 0;
+}
+```
 ## 初始值列表构造函数
 下面两个赋值语句实际上等同于调用了下面的函数
 ```

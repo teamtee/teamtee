@@ -55,9 +55,19 @@
 - 说明:
 
 ### C++
+最优资料:[CS106L](https://web.stanford.edu/class/cs106l/)
+
 [stackoverflow资料合集推荐](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
 
 A Tour of C++中文版pdf:[](./media/download.eeworld.com.cn_C%20%20语言导学.A%20Tour%20of%20C%20%20.pdf)
+
+#### 参考文档
+- 名称:参考文档
+- 类型:网页
+- 资源:[网站](https://en.cppreference.com/w/)
+- 作者:
+- 说明:
+
 ## 语音
 
 ### Kaldi
