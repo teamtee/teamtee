@@ -1,0 +1,782 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数字语音处理 · teamtee's home</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="teamtee">
+        <meta name="identifier" content="xx" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Kaldi/" />
+    
+    
+    <link rel="prev" href="../C++/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    课程记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../DeepLearning/">
+            
+                <a href="../DeepLearning/">
+            
+                    
+                    DeepLeaning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Python/">
+            
+                <a href="../Python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../C++/">
+            
+                <a href="../C++/">
+            
+                    
+                    C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    数字语音处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Kaldi/">
+            
+                <a href="../Kaldi/">
+            
+                    
+                    Kaldi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../记录/OperationSystem/README.md">
+            
+                <span>
+            
+                    
+                    OperationSystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../记录/JYY's PA/README.md">
+            
+                <span>
+            
+                    
+                    JYY's PA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Python/">
+            
+                <a href="../Python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../博客日志/">
+            
+                <a href="../../博客日志/">
+            
+                    
+                    博客日志
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../博客日志/Gitbook/">
+            
+                <a href="../../博客日志/Gitbook/">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../博客日志/Gitbook/Gitbook Explore in Mac/">
+            
+                <a href="../../博客日志/Gitbook/Gitbook Explore in Mac/">
+            
+                    
+                    Gitbook的Mac开发环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../博客日志/Gitbook/Markdown语法/">
+            
+                <a href="../../博客日志/Gitbook/Markdown语法/">
+            
+                    
+                    Markdown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../博客日志/Tutorial/">
+            
+                <a href="../../博客日志/Tutorial/">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../博客日志/Tutorial/Dian/Linux/">
+            
+                <a href="../../博客日志/Tutorial/Dian/Linux/">
+            
+                    
+                    Linux/ssh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../博客日志/Tutorial/Dian/Git/">
+            
+                <a href="../../博客日志/Tutorial/Dian/Git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../速查笔记/">
+            
+                <a href="../../速查笔记/">
+            
+                    
+                    速查笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../速查笔记/Linux/">
+            
+                <a href="../../速查笔记/Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../速查笔记/Linux/Vim/">
+            
+                <a href="../../速查笔记/Linux/Vim/">
+            
+                    
+                    Vim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../速查笔记/Linux/Git/">
+            
+                <a href="../../速查笔记/Linux/Git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../速查笔记/Linux/Tmux/">
+            
+                <a href="../../速查笔记/Linux/Tmux/">
+            
+                    
+                    Tmux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../速查笔记/Linux/Make/">
+            
+                <a href="../../速查笔记/Linux/Make/">
+            
+                    
+                    Make
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../速查笔记/Python/">
+            
+                <a href="../../速查笔记/Python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../速查笔记/Python/DeepLearning/">
+            
+                <a href="../../速查笔记/Python/DeepLearning/">
+            
+                    
+                    DeepLearning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../../速查笔记/Python/DeepLearning/Pandas/">
+            
+                <a href="../../速查笔记/Python/DeepLearning/Pandas/">
+            
+                    
+                    Pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.1.2" data-path="../../速查笔记/Python/DeepLearning/matplotlib/">
+            
+                <a href="../../速查笔记/Python/DeepLearning/matplotlib/">
+            
+                    
+                    Matplotlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >数字语音处理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x4ECB;"><b></b>&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#parti-fundamental-topics"><b></b>PartI: Fundamental Topics</a></li><ul><li><span class="title-icon "></span><a href="#10-introduction-to-digital-speech-processing"><b></b>1.0 Introduction to Digital Speech Processing</a></li><li><span class="title-icon "></span><a href="#20-fundamentals-of-speech-recognition"><b></b>2.0 Fundamentals of Speech Recognition</a></li><ul><li><span class="title-icon "></span><a href="#hmm"><b></b>HMM</a></li><li><span class="title-icon "></span><a href="#n-dim-guassion"><b></b>N-dim Guassion</a></li><li><span class="title-icon "></span><a href="#feature-extraction-front-end-signal-processing"><b></b>Feature Extraction (Front-end Signal Processing)</a></li></ul><li><span class="title-icon "></span><a href="#30-map-of-subject-areas"><b></b>3.0 Map of Subject Areas</a></li><li><span class="title-icon "></span><a href="#40-more-about-hidden-markov-models"><b></b>4.0 More about Hidden Markov Models</a></li><li><span class="title-icon "></span><a href="#50-acoustic-modeling"><b></b>5.0 Acoustic Modeling</a></li><li><span class="title-icon "></span><a href="#60-language-modeling"><b></b>6.0 Language Modeling</a></li><li><span class="title-icon "></span><a href="#70-speech-signals-and-front-end-processing"><b></b>7.0 Speech Signals and Front-end Processing</a></li><li><span class="title-icon "></span><a href="#80-search-algorithms-for-speech-recognition"><b></b>8.0 Search Algorithms for Speech Recognition</a></li></ul><li><span class="title-icon "></span><a href="#part-ii-advanced-topics"><b></b>Part II: Advanced Topics</a></li><ul><li><span class="title-icon "></span><a href="#90-speech-recognition-updates"><b></b>9.0 Speech Recognition Updates</a></li><li><span class="title-icon "></span><a href="#100-speech-based-information-retrieval"><b></b>10.0 Speech-based Information Retrieval</a></li><li><span class="title-icon "></span><a href="#110-spoken-document-understanding-and-organization-for-user-content-interaction"><b></b>11.0 Spoken Document Understanding and Organization for User-content Interaction</a></li><li><span class="title-icon "></span><a href="#120-computer-assisted-language-learningcall"><b></b>12.0 Computer-assisted Language Learning(Call)</a></li><li><span class="title-icon "></span><a href="#130-speaker-variabilities-adaption-and-recognition"><b></b>13.0 Speaker Variabilities: Adaption and Recognition</a></li><li><span class="title-icon "></span><a href="#140-latent-topic-analysis"><b></b>14.0 Latent Topic Analysis</a></li><li><span class="title-icon "></span><a href="#150-robustness-for-acoustic-environment"><b></b>15.0 Robustness for Acoustic Environment</a></li><li><span class="title-icon "></span><a href="#160-some-fundamental-problem-solving-approaches"><b></b>16.0 Some Fundamental Problem-solving Approaches</a></li><li><span class="title-icon "></span><a href="#170-spoken-dialogues"><b></b>17.0 Spoken Dialogues</a></li><li><span class="title-icon "></span><a href="#180-conclusion"><b></b>18.0 Conclusion</a></li></ul></ul></div><a href="#&#x7B80;&#x4ECB;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x4ECB;" class="plugin-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h1>
+<p>&#x8FD9;&#x662F;&#x53F0;&#x5927;&#x7684;&#x674E;&#x7433;&#x5C71;&#x8001;&#x5E08;&#x7684;&#x8BFE;&#x7A0B;&#xFF0C;&#x8BFE;&#x7A0B;&#x524D;&#x516B;&#x8282;&#x662F;&#x57FA;&#x7840;&#xFF0C;&#x540E;&#x516B;&#x8282;&#x8BFE;&#x662F;&#x62D3;&#x5C55;&#x3002;</p>
+<h1 id="parti-fundamental-topics"><a name="parti-fundamental-topics" class="anchor-navigation-ex-anchor" href="#parti-fundamental-topics"><i class="fa fa-link" aria-hidden="true"></i></a><a name="parti-fundamental-topics" class="plugin-anchor" href="#parti-fundamental-topics"><i class="fa fa-link" aria-hidden="true"></i></a>PartI: Fundamental Topics</h1>
+<h2 id="10-introduction-to-digital-speech-processing"><a name="10-introduction-to-digital-speech-processing" class="anchor-navigation-ex-anchor" href="#10-introduction-to-digital-speech-processing"><i class="fa fa-link" aria-hidden="true"></i></a><a name="10-introduction-to-digital-speech-processing" class="plugin-anchor" href="#10-introduction-to-digital-speech-processing"><i class="fa fa-link" aria-hidden="true"></i></a>1.0 Introduction to Digital Speech Processing</h2>
+<p><img src="media/17112776988236.jpg" alt="">
+Acoustic Models &#xFF1A;&#x58F0;&#x5B66;&#x6A21;&#x578B;&#xFF0C;&#x8BED;&#x97F3;&#x6CE2;&#x5F62;-&gt;&#x8BED;&#x97F3;&#x5355;&#x4F4D;&#xFF08;&#x6BD4;&#x5982;&#x97F3;&#x7D20;&#xFF09;</p>
+<p>Lexicon&#xFF1A;&#x8BCD;&#x5178;&#xFF0C;&#x8BED;&#x97F3;&#x5355;&#x4F4D;-&gt;&#x8BED;&#x8A00;&#x5355;&#x4F4D;&#xFF08;&#x6BD4;&#x5982;&#x5B57;&#xFF0C;&#x6216;&#x8005;&#x5355;&#x8BCD;&#x6216;&#x8005;&#x8BCD;&#x8BED;&#xFF09;</p>
+<p>Language Model&#xFF1A;&#x8BED;&#x8A00;&#x6A21;&#x578B;&#xFF0C;&#x6BD4;&#x5982;&#x9884;&#x6D4B;&#x5728;&#x524D;&#x4E00;&#x4E2A;&#x8BED;&#x8A00;&#x5355;&#x4F4D;&#x4E0B;&#x540E;&#x4E00;&#x4E2A;&#x8BED;&#x8A00;&#x5355;&#x4F4D;&#x7684;&#x6982;&#x7387;</p>
+<h2 id="20-fundamentals-of-speech-recognition"><a name="20-fundamentals-of-speech-recognition" class="anchor-navigation-ex-anchor" href="#20-fundamentals-of-speech-recognition"><i class="fa fa-link" aria-hidden="true"></i></a><a name="20-fundamentals-of-speech-recognition" class="plugin-anchor" href="#20-fundamentals-of-speech-recognition"><i class="fa fa-link" aria-hidden="true"></i></a>2.0 Fundamentals of Speech Recognition</h2>
+<h3 id="hmm"><a name="hmm" class="anchor-navigation-ex-anchor" href="#hmm"><i class="fa fa-link" aria-hidden="true"></i></a><a name="hmm" class="plugin-anchor" href="#hmm"><i class="fa fa-link" aria-hidden="true"></i></a>HMM</h3>
+<p>(1)Evaluation Problem:</p>
+<p>Given O =(o1, o2, &#x2026;ot&#x2026;oT) and  = (A, B,$\pi$ ),find Prob [ O | $\pi$ ]</p>
+<p>(2)Decoding Problem:</p>
+<p>Given O = (o1, o2, &#x2026;ot&#x2026;oT) and = (A, B, $\pi$),find a best state sequence q = (q1,q2,&#x2026;qt,&#x2026;qT)</p>
+<p>(3)Learning Problem:</p>
+<p>Given O, find best values for parameters in such that Prob [ O | $\pi$ ] = max</p>
+<h3 id="n-dim-guassion"><a name="n-dim-guassion" class="anchor-navigation-ex-anchor" href="#n-dim-guassion"><i class="fa fa-link" aria-hidden="true"></i></a><a name="n-dim-guassion" class="plugin-anchor" href="#n-dim-guassion"><i class="fa fa-link" aria-hidden="true"></i></a>N-dim Guassion</h3>
+<h3 id="feature-extraction-front-end-signal-processing"><a name="feature-extraction-front-end-signal-processing" class="anchor-navigation-ex-anchor" href="#feature-extraction-front-end-signal-processing"><i class="fa fa-link" aria-hidden="true"></i></a><a name="feature-extraction-front-end-signal-processing" class="plugin-anchor" href="#feature-extraction-front-end-signal-processing"><i class="fa fa-link" aria-hidden="true"></i></a>Feature Extraction (Front-end Signal Processing)</h3>
+<h4 id="pre-emphasis"><a name="pre-emphasis" class="anchor-navigation-ex-anchor" href="#pre-emphasis"><i class="fa fa-link" aria-hidden="true"></i></a><a name="pre-emphasis" class="plugin-anchor" href="#pre-emphasis"><i class="fa fa-link" aria-hidden="true"></i></a>Pre-emphasis</h4>
+<p><img src="media/17112783139286.jpg" alt=""></p>
+<h4 id="endpoint-detection-speechsilence-discrimination"><a name="endpoint-detection-speechsilence-discrimination" class="anchor-navigation-ex-anchor" href="#endpoint-detection-speechsilence-discrimination"><i class="fa fa-link" aria-hidden="true"></i></a><a name="endpoint-detection-speechsilence-discrimination" class="plugin-anchor" href="#endpoint-detection-speechsilence-discrimination"><i class="fa fa-link" aria-hidden="true"></i></a>Endpoint Detection (Speech/Silence Discrimination)</h4>
+<p><img src="media/17112783259868.jpg" alt=""></p>
+<h4 id="windowing"><a name="windowing" class="anchor-navigation-ex-anchor" href="#windowing"><i class="fa fa-link" aria-hidden="true"></i></a><a name="windowing" class="plugin-anchor" href="#windowing"><i class="fa fa-link" aria-hidden="true"></i></a>Windowing</h4>
+<p>Rectangular window</p>
+<p>Hamming window</p>
+<h4 id="mfcc"><a name="mfcc" class="anchor-navigation-ex-anchor" href="#mfcc"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mfcc" class="plugin-anchor" href="#mfcc"><i class="fa fa-link" aria-hidden="true"></i></a>MFCC</h4>
+<p><img src="media/17112783259868.jpg" alt=""></p>
+<h4 id="n-gram"><a name="n-gram" class="anchor-navigation-ex-anchor" href="#n-gram"><i class="fa fa-link" aria-hidden="true"></i></a><a name="n-gram" class="plugin-anchor" href="#n-gram"><i class="fa fa-link" aria-hidden="true"></i></a>N-gram</h4>
+<h4 id="map&#x6700;&#x5927;&#x540E;&#x9A8C;&#x6982;&#x7387;&#xFF09;"><a name="map&#x6700;&#x5927;&#x540E;&#x9A8C;&#x6982;&#x7387;&#xFF09;" class="anchor-navigation-ex-anchor" href="#map&#x6700;&#x5927;&#x540E;&#x9A8C;&#x6982;&#x7387;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="map&#x6700;&#x5927;&#x540E;&#x9A8C;&#x6982;&#x7387;&#xFF09;" class="plugin-anchor" href="#map&#x6700;&#x5927;&#x540E;&#x9A8C;&#x6982;&#x7387;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>MAP(&#x6700;&#x5927;&#x540E;&#x9A8C;&#x6982;&#x7387;&#xFF09;</h4>
+<h2 id="30-map-of-subject-areas"><a name="30-map-of-subject-areas" class="anchor-navigation-ex-anchor" href="#30-map-of-subject-areas"><i class="fa fa-link" aria-hidden="true"></i></a><a name="30-map-of-subject-areas" class="plugin-anchor" href="#30-map-of-subject-areas"><i class="fa fa-link" aria-hidden="true"></i></a>3.0 Map of Subject Areas</h2>
+<h2 id="40-more-about-hidden-markov-models"><a name="40-more-about-hidden-markov-models" class="anchor-navigation-ex-anchor" href="#40-more-about-hidden-markov-models"><i class="fa fa-link" aria-hidden="true"></i></a><a name="40-more-about-hidden-markov-models" class="plugin-anchor" href="#40-more-about-hidden-markov-models"><i class="fa fa-link" aria-hidden="true"></i></a>4.0 More about Hidden Markov Models</h2>
+<h2 id="50-acoustic-modeling"><a name="50-acoustic-modeling" class="anchor-navigation-ex-anchor" href="#50-acoustic-modeling"><i class="fa fa-link" aria-hidden="true"></i></a><a name="50-acoustic-modeling" class="plugin-anchor" href="#50-acoustic-modeling"><i class="fa fa-link" aria-hidden="true"></i></a>5.0 Acoustic Modeling</h2>
+<h2 id="60-language-modeling"><a name="60-language-modeling" class="anchor-navigation-ex-anchor" href="#60-language-modeling"><i class="fa fa-link" aria-hidden="true"></i></a><a name="60-language-modeling" class="plugin-anchor" href="#60-language-modeling"><i class="fa fa-link" aria-hidden="true"></i></a>6.0 Language Modeling</h2>
+<h2 id="70-speech-signals-and-front-end-processing"><a name="70-speech-signals-and-front-end-processing" class="anchor-navigation-ex-anchor" href="#70-speech-signals-and-front-end-processing"><i class="fa fa-link" aria-hidden="true"></i></a><a name="70-speech-signals-and-front-end-processing" class="plugin-anchor" href="#70-speech-signals-and-front-end-processing"><i class="fa fa-link" aria-hidden="true"></i></a>7.0 Speech Signals and Front-end Processing</h2>
+<h2 id="80-search-algorithms-for-speech-recognition"><a name="80-search-algorithms-for-speech-recognition" class="anchor-navigation-ex-anchor" href="#80-search-algorithms-for-speech-recognition"><i class="fa fa-link" aria-hidden="true"></i></a><a name="80-search-algorithms-for-speech-recognition" class="plugin-anchor" href="#80-search-algorithms-for-speech-recognition"><i class="fa fa-link" aria-hidden="true"></i></a>8.0 Search Algorithms for Speech Recognition</h2>
+<h1 id="part-ii-advanced-topics"><a name="part-ii-advanced-topics" class="anchor-navigation-ex-anchor" href="#part-ii-advanced-topics"><i class="fa fa-link" aria-hidden="true"></i></a><a name="part-ii-advanced-topics" class="plugin-anchor" href="#part-ii-advanced-topics"><i class="fa fa-link" aria-hidden="true"></i></a>Part II: Advanced Topics</h1>
+<h2 id="90-speech-recognition-updates"><a name="90-speech-recognition-updates" class="anchor-navigation-ex-anchor" href="#90-speech-recognition-updates"><i class="fa fa-link" aria-hidden="true"></i></a><a name="90-speech-recognition-updates" class="plugin-anchor" href="#90-speech-recognition-updates"><i class="fa fa-link" aria-hidden="true"></i></a>9.0 Speech Recognition Updates</h2>
+<h2 id="100-speech-based-information-retrieval"><a name="100-speech-based-information-retrieval" class="anchor-navigation-ex-anchor" href="#100-speech-based-information-retrieval"><i class="fa fa-link" aria-hidden="true"></i></a><a name="100-speech-based-information-retrieval" class="plugin-anchor" href="#100-speech-based-information-retrieval"><i class="fa fa-link" aria-hidden="true"></i></a>10.0 Speech-based Information Retrieval</h2>
+<h2 id="110-spoken-document-understanding-and-organization-for-user-content-interaction"><a name="110-spoken-document-understanding-and-organization-for-user-content-interaction" class="anchor-navigation-ex-anchor" href="#110-spoken-document-understanding-and-organization-for-user-content-interaction"><i class="fa fa-link" aria-hidden="true"></i></a><a name="110-spoken-document-understanding-and-organization-for-user-content-interaction" class="plugin-anchor" href="#110-spoken-document-understanding-and-organization-for-user-content-interaction"><i class="fa fa-link" aria-hidden="true"></i></a>11.0 Spoken Document Understanding and Organization for User-content Interaction</h2>
+<h2 id="120-computer-assisted-language-learningcall"><a name="120-computer-assisted-language-learningcall" class="anchor-navigation-ex-anchor" href="#120-computer-assisted-language-learningcall"><i class="fa fa-link" aria-hidden="true"></i></a><a name="120-computer-assisted-language-learningcall" class="plugin-anchor" href="#120-computer-assisted-language-learningcall"><i class="fa fa-link" aria-hidden="true"></i></a>12.0 Computer-assisted Language Learning(Call)</h2>
+<h2 id="130-speaker-variabilities-adaption-and-recognition"><a name="130-speaker-variabilities-adaption-and-recognition" class="anchor-navigation-ex-anchor" href="#130-speaker-variabilities-adaption-and-recognition"><i class="fa fa-link" aria-hidden="true"></i></a><a name="130-speaker-variabilities-adaption-and-recognition" class="plugin-anchor" href="#130-speaker-variabilities-adaption-and-recognition"><i class="fa fa-link" aria-hidden="true"></i></a>13.0 Speaker Variabilities: Adaption and Recognition</h2>
+<h2 id="140-latent-topic-analysis"><a name="140-latent-topic-analysis" class="anchor-navigation-ex-anchor" href="#140-latent-topic-analysis"><i class="fa fa-link" aria-hidden="true"></i></a><a name="140-latent-topic-analysis" class="plugin-anchor" href="#140-latent-topic-analysis"><i class="fa fa-link" aria-hidden="true"></i></a>14.0 Latent Topic Analysis</h2>
+<h2 id="150-robustness-for-acoustic-environment"><a name="150-robustness-for-acoustic-environment" class="anchor-navigation-ex-anchor" href="#150-robustness-for-acoustic-environment"><i class="fa fa-link" aria-hidden="true"></i></a><a name="150-robustness-for-acoustic-environment" class="plugin-anchor" href="#150-robustness-for-acoustic-environment"><i class="fa fa-link" aria-hidden="true"></i></a>15.0 Robustness for Acoustic Environment</h2>
+<h2 id="160-some-fundamental-problem-solving-approaches"><a name="160-some-fundamental-problem-solving-approaches" class="anchor-navigation-ex-anchor" href="#160-some-fundamental-problem-solving-approaches"><i class="fa fa-link" aria-hidden="true"></i></a><a name="160-some-fundamental-problem-solving-approaches" class="plugin-anchor" href="#160-some-fundamental-problem-solving-approaches"><i class="fa fa-link" aria-hidden="true"></i></a>16.0 Some Fundamental Problem-solving Approaches</h2>
+<h2 id="170-spoken-dialogues"><a name="170-spoken-dialogues" class="anchor-navigation-ex-anchor" href="#170-spoken-dialogues"><i class="fa fa-link" aria-hidden="true"></i></a><a name="170-spoken-dialogues" class="plugin-anchor" href="#170-spoken-dialogues"><i class="fa fa-link" aria-hidden="true"></i></a>17.0 Spoken Dialogues</h2>
+<h2 id="180-conclusion"><a name="180-conclusion" class="anchor-navigation-ex-anchor" href="#180-conclusion"><i class="fa fa-link" aria-hidden="true"></i></a><a name="180-conclusion" class="plugin-anchor" href="#180-conclusion"><i class="fa fa-link" aria-hidden="true"></i></a>18.0 Conclusion</h2>
+<p>&#x8BED;&#x8005;&#x8BC6;&#x522B;&#x4E0E;&#x9002;&#x5E94;
+SI &#x8BED;&#x8005;&#x72EC;&#x7ACB;
+SD &#x8BED;&#x8005;&#x76F8;&#x5173;
+SA &#x8BED;&#x8005;&#x9002;&#x5E94;
+MAP &#x6700;&#x5927;&#x540E;&#x9A8C;&#x6982;&#x7387;
+MLLR &#x6700;&#x5927;&#x6982;&#x7387;&#x7EBF;&#x6027;&#x538B;&#x7F29;
+PCA &#x4E3B;&#x6210;&#x5206;&#x5206;&#x6790;
+EigenVoice (PAC)
+SAT
+CAT</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../C++/" class="navigation navigation-prev " aria-label="Previous page: C++">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Kaldi/" class="navigation navigation-next " aria-label="Next page: Kaldi">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数字语音处理","level":"1.2.4","depth":2,"next":{"title":"Kaldi","level":"1.2.5","depth":2,"path":"课程记录/Kaldi/README.md","ref":"课程记录/Kaldi/README.md","articles":[]},"previous":{"title":"C++","level":"1.2.3","depth":2,"path":"课程记录/C++/README.md","ref":"课程记录/C++/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["search-pro","code","expandable-chapters","-back-to-top-button","alerts","flexible-alerts","anchors","ga","collapsible-chapters","-page-toc-button","anchor-navigation-ex","remove-published-with-link","theme-comscore","pageview-count","katex","videoplayer","livereload"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevelIcon":true,"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"printLog":false,"multipleH1":false,"multipleH2":false,"associatedWithSummary":true,"multipleH3":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"multipleH4":false},"theme-comscore":{},"pageview-count":{},"alerts":{},"remove-published-with-link":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"flat","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"},"question":{"label":"Question","icon":"fa fa-question","className":"info"}},"ga":{"configuration":"auto","token":"UA-XXXX-Y"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"videoplayer":{},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"teamtee","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"xx","variables":{},"title":"teamtee's home","gitbook":"*","description":"a book for writting and reading"},"file":{"path":"课程记录/数字语音处理/README.md","mtime":"2024-04-01T11:43:37.483Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-02T10:08:58.930Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-remove-published-with-link/remove-link.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
