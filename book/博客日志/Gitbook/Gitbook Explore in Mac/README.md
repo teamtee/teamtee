@@ -1,4 +1,5 @@
 # [Mac] Gitbook in Mac
+
 最近一直在思考如何学习 ，其中很重要的一环是输出。我曾经使用过语雀、思云等等，尽管它们功能丰富并且支持云端，但是对于像一本书一样阅读，这样的要求是达不到的，因此我选择了Gitbook + Githubpages
 # 一、简单使用
 
@@ -24,6 +25,7 @@ brew install npm
 
     
 ### nvm
+
 `nvm`也是`Node.js`的版本管理工具，类似`Python`里面的`conda`。我们需要用它来管理`Node.js`的版本。
 ```
 brew install  nvm 
@@ -40,6 +42,7 @@ brew install  nvm
 ## 2.使用
 
 ### 初始化
+
 选择一个你希望的空文件夹，初始化工作目录
 
 ```
@@ -313,6 +316,7 @@ pluginsConfig: {
 ```
 # 三、深入探索
 ##  Github Pages
+
 在`github`上新建一个仓库，新建个`gh-page`分支，在`github`设置支持静态网页的`pages`。然后我们可以将这个仓库克隆下来，初始化`gitbook`。不过值得注意的是`github`只是支持选择`/`和`/docs`这两个路径作为网页根目录。因此我们选择`/docs`，这样的话适合`gitbook`.
 
 调整`gitbook`仓库的目录如下,根路径下的`README.md`作为仓库的说明，`book`下的`README.md`作为书籍首页的说明。`book`可以修改为你喜欢的名字。
@@ -373,6 +377,7 @@ gitbook serve book docs
 ## 问题合集
 
 ###  gitbook install 出问题
+
 使用下面的替代
 ```
 npm install gitbook-plugin-*
@@ -380,6 +385,7 @@ gitbook install
 ```
 
 # 参考链接
+
 [官方下载和安装文档](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)
 
 

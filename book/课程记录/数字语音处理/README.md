@@ -5,6 +5,7 @@
 
 # PartI: Fundamental Topics
 ## 1.0 Introduction to Digital Speech Processing
+
 ![](media/17112776988236.jpg)
 Acoustic Models ：声学模型，语音波形->语音单位（比如音素）
 
@@ -13,6 +14,7 @@ Lexicon：词典，语音单位->语言单位（比如字，或者单词或者�
 Language Model：语言模型，比如预测在前一个语言单位下后一个语言单位的概率
 ## 2.0 Fundamentals of Speech Recognition
 ### HMM
+
 (1)Evaluation Problem:
 
 Given O =(o1, o2, …ot…oT) and  = (A, B,$\pi$ ),find Prob [ O | $\pi$ ]
@@ -28,19 +30,23 @@ Given O, find best values for parameters in such that Prob [ O | $\pi$ ] = max
 ### N-dim Guassion
 ### Feature Extraction (Front-end Signal Processing)
 #### Pre-emphasis
+
 ![](media/17112783139286.jpg)
 
 #### Endpoint Detection (Speech/Silence Discrimination)
+
 ![](media/17112783259868.jpg)
 
 #### Windowing
+
 Rectangular window
 
 Hamming window
 #### MFCC
+
 ![](media/17112783259868.jpg)
 #### N-gram
-#### MAP(最大后验概率）
+#### MAP(最大后验概率)
 ## 3.0 Map of Subject Areas
 ## 4.0 More about Hidden Markov Models
 ## 5.0 Acoustic Modeling

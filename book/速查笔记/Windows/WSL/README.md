@@ -11,3 +11,23 @@ dnsTunneling=true
 firewall=true
 autoProxy=true
 ```
+
+## 配置ssh-agnet的问题
+
+```bash
+eval "ssh-agent"
+ssh-add ~/.ssh/github
+```
+上面的代码会报错
+```bash
+Could not open a connection to your authentication agent
+```
+
+```bash
+eval "ssh-agent bash"
+ssh-add ~/.ssh/github
+```
+上面的代码会报错,但是如果不再.bashrc中添加，在启动后的命令行直接输入就没有问题
+```bash
+bash: warning: shell level (1000) too high, resetting to 1
+```

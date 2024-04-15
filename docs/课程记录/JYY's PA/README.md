@@ -8,6 +8,7 @@
 ### Makefile
 
 #### section 1
+
  `$(deps_config): ;` 是一个空规则。它表示 `deps_config` 中的文件不需要进行任何操作，即使这些文件不存在，也不会报错
 
 ```
@@ -26,6 +27,7 @@ $(deps_config): ;
 
 
 #### section 2 
+
 ```
 remove_quote = $(patsubst "%",%,$(1))
 CC = $(call remove_quote,$(CONFIG_CC))
@@ -66,6 +68,7 @@ typedef struct {
 
 
 #### 颜色输出
+
 但我们使用命令的时候可以看到是有颜色输出的，比如`ls`,实际上命令通常都有一个`--color`的选项来控制在什么情况下输出字符,如果我们`ls --color=true | vim -`是可以看到奇怪的输出.
 
 实际上控制台通过以下方式输出颜色
@@ -82,6 +85,7 @@ typedef struct {
 ## 附录
 
 ### C regular实例
+
 下面是一个简单的示例
 
 ```c

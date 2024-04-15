@@ -12,3 +12,12 @@ ssh-add l
 ```
 Could not open a connection to your authentication agent.
 ```
+
+
+## sshd
+```
+sudo apt install openssh-server
+sudo systemctl status openssh-server
+sudo systemctl start openssh-server
+```
+配置文件`/etc/ssh/sshd_config`

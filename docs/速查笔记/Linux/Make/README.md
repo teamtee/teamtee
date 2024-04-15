@@ -49,7 +49,7 @@ $<:first prerequisite
 `*`在命令中表现为通配符
 ```
 $(wildcard *.c)
-$(filter *.o,$(objects):%.o:%.c
+$(filter *.o,$(objects):%.o:%.c)
 ```
 `%`在规则和变量赋值中表现为通配符
 ```
@@ -144,7 +144,7 @@ config name
 ```
 bool "Networking support"
 ```
-(注：tristate为y/n/m三态，y表选择，n不是不选择，m表示编译到内核）
+(注：tristate为y/n/m三态，y表选择，n不是不选择，m表示编译到内核)
 
 可以配置提示符:
 最多一个

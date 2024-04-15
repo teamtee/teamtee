@@ -3,6 +3,7 @@
 ## HW01
  
 ### 参数优化
+
 MLP模型：（input_feature，dim）->(dim,dim)xlayer ->(dim,1)
 #### 特征选择
 
@@ -77,6 +78,7 @@ boss不知道用什么架构，过吧
 
 
 #### 关于层数
+
 | acc    | lr   | epoch | seed | batch | optim | loss             | model | model_params    | feature    |
 |:------:|:----:|:-----:|:----:|:-----:|:-----:|:----------------:|:-----:|:---------------:|:----------:|
 | 0.64   | 1e-4 | 512   | 1213 | 512   | Adam  | CrossEntropyLoss | MLP   | layer=2,dim=64  | connect=19 |
@@ -97,6 +99,7 @@ boss不知道用什么架构，过吧
 | 0.98   | 0.69 | 1e-4 | 30    | 1213 | 512   | Adam  | CrossEntropyLoss | MLP   | layer=2,dim= 2048 | connect=19 |
 
 ### 关于Droupout
+
 Droupout默认放在激活函数后
 | 训练集 | acc   | lr   | epoch | seed | batch | optim              | loss             | model | model_params      | feature    |
 |:------:|:-----:|:----:|:-----:|:----:|:-----:|:------------------:|:----------------:|:-----:|:-----------------:|:----------:|
@@ -110,6 +113,7 @@ Droupout默认放在激活函数后
 
 
 ### 关于Batchnormal
+
 Batchnormal放在激活函数前
 | 训练集 | acc   | lr   | epoch | seed | batch | optim              | loss             | model | model_params      | feature    |
 |:------:|:-----:|:----:|:-----:|:----:|:-----:|:------------------:|:----------------:|:-----:|:-----------------:|:----------:|
@@ -123,6 +127,7 @@ Batchnormal放在激活函数前
 | 0.80   | 0.751 | 1e-4 | 250   | 1213 | 512   | Adam | CrossEntropyLoss | MLP(Droupout=0.5,Batchnorm)   | layer=2,dim=2048  | connect=19 |
 | 0.72   | 0.741 | 1e-4 | 250   | 1213 | 512   | Adam | CrossEntropyLoss | MLP(Droupout=0.5,Batchnorm)   | layer=2,dim= 1024 | connect=19 |
 ### 关于Batchsize
+
 | 训练集 | acc   | lr   | epoch | seed | batch | optim | loss             | model                       | model_params      | feature    |
 |:------:|:-----:|:----:|:-----:|:----:|:-----:|:-----:|:----------------:|:---------------------------:|:-----------------:|:----------:|
 | 0.72   | 0.741 | 1e-4 | 250   | 1213 | 512   | Adam  | CrossEntropyLoss | MLP(Droupout=0.5,Batchnorm) | layer=2,dim= 1024 | connect=19 |
@@ -130,6 +135,7 @@ Batchnormal放在激活函数前
 | 0.81（302）   | 0.751（301） | 1e-4 | 250   | 1213 | 512   | Adam  | CrossEntropyLoss | MLP(Droupout=0.5,Batchnorm) | layer=2,dim= 2048 | connect=19 |
 
 ### 关于weight_decay
+
 | 训练集 | acc  | lr   | epoch | seed | batch | optim           | loss             | model                       | model_params      | feature    |
 |:------:|:----:|:----:|:-----:|:----:|:-----:|:---------------:|:----------------:|:---------------------------:|:-----------------:|:----------:|
 | 0.70   | 0.73 | 1e-4 | 250   | 1213 | 512   | Adam(wd = 1e-4) | CrossEntropyLoss | MLP(Droupout=0.5,Batchnorm) | layer=2,dim= 1024 | connect=19 |
