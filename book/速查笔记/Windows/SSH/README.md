@@ -20,4 +20,10 @@ $ which ssh
 ```
 git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe
 ```
-
+如果你通过自带的服务启动ssh-agent时没有帮你自动的添加秘钥，你可以在bash的启动脚本profile.ps1中手动添加
+```
+# 获取所有脚本
+Get-Member -InputObject $PROFILE -Type NoteProperty
+# 获取你目录下的那个
+powershell -command "echo $PROFILE"
+```

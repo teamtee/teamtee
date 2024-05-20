@@ -71,7 +71,8 @@
 - 资源:[网站](https://docs.python.org/3/)
 - 作者:
 - 说明:
-
+#### RealPython
+https://realpython.com/start-here/
 ### C++
 
 最优资料:[CS106L](https://web.stanford.edu/class/cs106l/)
@@ -95,6 +96,8 @@ A Tour of C++中文版pdf:[](./media/download.eeworld.com.cn_C%20%20语言导学
 ## 语音
 
 ### Kaldi
+#### Nlp
+https://www.52nlp.cn/
 
 #### Kaldi Tutorial
 
@@ -131,3 +134,12 @@ AIshare1 178小时中文对话，400小时
 [推荐](https://zhuanlan.zhihu.com/p/59575701)
 
 [官方文本教程](https://docs.blender.org/manual/zh-hans/2.79/getting_started/about/index.html)
+
+
+
+#### 
+github必看论文
+https://github.com/nl8590687/Machine-Learning-Tutorial-Chinese/blob/master/Papers.md
+
+大神
+https://github.com/nl8590687

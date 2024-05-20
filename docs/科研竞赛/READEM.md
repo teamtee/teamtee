@@ -1,1 +1,0 @@
-[语音方向的会议、竞赛、期刊](https://zhuanlan.zhihu.com/p/400091001)

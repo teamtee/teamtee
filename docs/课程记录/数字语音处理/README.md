@@ -14,19 +14,20 @@ Lexicon：词典，语音单位->语言单位（比如字，或者单词或者�
 Language Model：语言模型，比如预测在前一个语言单位下后一个语言单位的概率
 ## 2.0 Fundamentals of Speech Recognition
 ### HMM
-
-(1)Evaluation Problem:
-
-Given O =(o1, o2, …ot…oT) and  = (A, B,$\pi$ ),find Prob [ O | $\pi$ ]
-
-(2)Decoding Problem:
-
-Given O = (o1, o2, …ot…oT) and = (A, B, $\pi$),find a best state sequence q = (q1,q2,…qt,…qT)
-
-(3)Learning Problem:
-
-Given O, find best values for parameters in such that Prob [ O | $\pi$ ] = max
-
+定义如下：
+![Alt text](image.png)
+![Alt text](image-1.png)
+![Alt text](image-2.png)
+![Alt text](image-3.png)
+![Alt text](image-4.png)
+![Alt text](image-5.png)
+![Alt text](image-6.png)
+![Alt text](image-7.png)
+![Alt text](image-8.png)
+![Alt text](image-9.png)
+![Alt text](image-10.png)
+![Alt text](image-11.png)
+![Alt text](image-12.png)
 ### N-dim Guassion
 ### Feature Extraction (Front-end Signal Processing)
 #### Pre-emphasis

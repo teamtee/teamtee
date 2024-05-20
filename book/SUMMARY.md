@@ -1,5 +1,7 @@
 
 ----
+* [科研竞赛](科研竞赛/README.md)
+    * [ASR](科研竞赛/ASR/README.md)
 * [课程记录](课程记录/README.md)
     * [DeepLeaning](课程记录/DeepLearning/README.md)
     * [Python](课程记录/Python/README.md)
@@ -9,10 +11,14 @@
     * [OperationSystem](记录/OperationSystem/README.md)
     * [JYY's PA](记录/JYY's PA/README.md)
     * [Python](课程记录/Python/README.md)
+    * [3D](课程记录/3D/Blender//README.md)
 * [博客日志](博客日志/README.md)
     * [Gitbook](博客日志/Gitbook/README.md)
         * [Gitbook的Mac开发环境搭建](博客日志/Gitbook/Gitbook Explore in Mac/README.md)
         * [Markdown语法](博客日志/Gitbook/Markdown语法/README.md)
+    * [Kaldi(TODO)](博客日志/Kaldi/README.md)
+    * [ML2023HW(TODO)](博客日志/ML2023HW/README.md)
+    * [MyChatGPT(TODO)](博客日志/MyChatGPT/README.md)
     * [Tutorial](博客日志/Tutorial/README.md)
         * [Linux/ssh](博客日志/Tutorial/Dian/Linux/README.md)
         * [Git](博客日志/Tutorial/Dian/Git/README.md)
@@ -31,5 +37,12 @@
         * [DeepLearning](速查笔记/Python/DeepLearning/README.md)
             * [Pandas](速查笔记/Python/DeepLearning/Pandas/README.md)
             * [Matplotlib](速查笔记/Python/DeepLearning/matplotlib/README.md)
+    * [Windows](速查笔记/Windows/README.md)
+        * [SSH](速查笔记/Windows/SSH/README.md)
+        * [WSL](速查笔记/Windows/WSL/README.md)
+    * [Research](速查笔记/Research/README.md)
+        * [Latex](速查笔记/Research/Latex/README.md)
+* [科研竞赛](速查笔记/README.md)
+    * [ASR](速查笔记/ASR/README.md)
 ----
 

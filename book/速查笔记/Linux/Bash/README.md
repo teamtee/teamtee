@@ -28,8 +28,15 @@ basename
 
 定义函数的两种方式,重定向是可选的
 ```
-fname () compound-command [ redirections ]
-function fname [()] compound-command [ redirections ]
+[ function ] funname [()]
+
+{
+
+    action;
+
+    [return int;]
+
+} [rediction]
 ```
 
 ### 条件控制
@@ -82,7 +89,7 @@ done
 ```
 字符串比较
 ```
-= == != -z(检查是否为空) -n(检查是否为非空)
+ == != -z(检查字符串是否为空) -n(检查字符串是否不为空) 注意比较符号都需要空格
 ```
 逻辑拓展
 ```
@@ -420,3 +427,71 @@ wait
 - set -o vi
 
 ## Corprocess 协程
+
+## read 命令
+在 Bash 中，`read` 命令用于从标准输入读取一行数据，并将其分割成单词，然后分配给 shell 变量。这在编写需要用户输入的脚本时非常有用。
+
+以下是一些使用 `read` 命令的基本示例：
+
+1. 读取一整行文本到一个变量中
+
+```bash
+read line
+echo "You entered: $line"
+```
+
+2. 同时读取多个输入值到不同的变量中
+
+```bash
+read name age
+echo "Name: $name, Age: $age"
+```
+
+3. 使用 `-p` 选项来指定输入提示：
+
+```bash
+read -p "Enter your name: " name
+echo "Hello, $name!"
+```
+
+4. 使用 `-a` 选项将输入的单词读入一个数组：
+
+```bash
+read -a array
+echo "First element: ${array[0]}, Second element: ${array[1]}"
+```
+
+5. 使用 `-r` 选项来防止反斜杠转义：
+
+```bash
+read -r "password"
+echo "Your password is: $password"
+```
+
+6. 读取文件中的每一行，并将它们逐行打印出来：
+
+```bash
+while IFS= read -r line
+do
+    echo "$line"
+done < "filename.txt"
+```
+
+在这个循环中，`IFS=` 为了防止行首和行尾的空白字符被剥离，`-r` 防止反斜杠转义，`< "filename.txt"` 是一种将文件重定向到 `read` 命令的方法。
+
+7. 从键盘读取输入，直到用户输入特定的结束标记：
+
+```bash
+echo "Enter lines, and end with a blank line:"
+read -r line
+while [ -n "$line" ]
+do
+    echo "You entered: $line"
+    read -r line
+done
+echo "Done reading input."
+```
+
+在这个例子中，脚本会一直读取用户输入的行，直到用户输入一个空行。
+
+`read` 命令非常灵活，可以根据不同的需要进行调整。在编写脚本时，合理使用 `read` 可以提高脚本的交互性和用户体验。

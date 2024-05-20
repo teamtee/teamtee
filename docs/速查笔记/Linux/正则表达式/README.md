@@ -27,7 +27,7 @@ Perl 系、Java 系、.Net 系、Python 系、JavaScript 系(另外还有Ruby、
 
 
 
-### Bash正则表达式(PAttrn Match)
+### Bash正则表达式(Pattern Match)
 - *：匹配任意字符
 - ？：匹配单个字符
 - [...]：匹配任意包含的字符，如果第一个字符是^或者!,取反

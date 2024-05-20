@@ -19,3 +19,42 @@ xclip -sel clipboard
 xclip -select primary
 echo "fs" | xclip
 ```
+## 查看glibc版本
+
+### 更新Glibc
+locate libc.so.6
+#### 安装编译新的版本
+```
+wget -c https://ftp.gnu.org/gnu/glibc/glibc-2.29.tar.gz
+tar -zxvf glibc-2.29.tar.gz
+mkdir glibc-2.29/build
+cd glibc-2.29/build
+../configure --prefix=路径
+make 
+make install
+```
+#### 更新路径文件
+下面添加上面安装的路径
+```
+/etc/ld.so.cache
+/etc/ld.so.conf
+/etc/ld.so.conf.d/
+```
+#### 更新配置
+更新/etc/ld.so.cache
+```
+sudo ldconfig  更新配置
+ldconfig -v 查看配置
+ldconfig -p 查看缓存
+```
+#### 配置文件
+```
+/etc/ld.so.cache
+/etc/ld.so.conf
+/etc/ld.so.conf.d/
+```
+
+
+## wget 
+
+wget [url] --user-agent="Mozilla/5.0 (X11;U;Linux i686;en-US;rv:1.9.0.3) Geco/2008092416 Firefox/3.0.3" --no-check-certificate
