@@ -42,7 +42,6 @@
         * [WSL](速查笔记/Windows/WSL/README.md)
     * [Research](速查笔记/Research/README.md)
         * [Latex](速查笔记/Research/Latex/README.md)
-* [科研竞赛](速查笔记/README.md)
-    * [ASR](速查笔记/ASR/README.md)
+
 ----
 
