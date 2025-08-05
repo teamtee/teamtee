@@ -1,4 +1,8 @@
 # teamteee.github.io
-这里是Teamtee的博客,欢迎各位来访问[这里](https://teamtee.github.io/)。
+This is Teamtee's blog. Welcome to visit [here](https://teamtee.github.io/).
+
+If you need to contact me, please email me: fangyg@hust.edu.cn / 2624071330@qq.com
+
+
 
 
